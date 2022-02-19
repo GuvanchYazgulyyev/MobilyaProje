@@ -1,0 +1,49 @@
+﻿@model MobilyaProje.Models.NeYapiyoruz
+@{
+    ViewBag.Title = "AdmNeYapiyoruzGetr";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Hizmetler Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("AdmNeYapiyoruzGuncelle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="div-boyut">
+        @*<label><b>Başlık</b></label>
+                @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+            </div>*@
+
+        <div>
+            <label><b>Başlık</b></label>
+            @Html.TextBoxFor(x => x.Baslik1, new { @class = "form-control" })
+
+        </div>
+        <div>
+            <label><b>İçerik</b></label>
+            @Html.TextAreaFor(x => x.icerik, 0, 4, new { @class = "form-control" })
+
+        </div>
+        <div>
+            <label><b>Resim</b></label>
+            <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+        </div>
+
+        <div>
+            <label><b>Resim Detay</b></label>
+            <input type="file" id="File1" name="File1" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+        </div>
+
+
+        <div>
+            @Html.HiddenFor(x => x.id)
+        </div>
+        <div>
+            <button class="button border with-icon">Değişiklikleri Kaydet</button>
+            <br />
+            <br />
+        </div>
+    </div>
+
+}
+
+

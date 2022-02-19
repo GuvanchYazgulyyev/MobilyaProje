@@ -1,0 +1,31 @@
+﻿@using MobilyaProje.Models
+@model List<iletisim>
+@{
+    ViewBag.Title = "AdmiletsmBilgi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="width:100%" ; class="col-md-12 table table-hover">
+    <h3>İletişim Bilgileri</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Adres</th>
+            <th>E Posta</th>
+            <th>Tel No:</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Adres</td>
+                <td>@x.Eposta</td>
+                <td>@x.Telefon</td>
+                @*<td>@x.Resim</td>*@
+                @*<td><a href="~/KPanel/AdmiletisimSil/@x.id" onclick="return confirm('Bunu Silmek İstediginizden Emin misin? @x.SubeKonum  @x.Adres ')" class="button border with-icon" style="background-color:#ff0000; color:#fff">Sil</a></td>*@
+                <td><a href="~/KPanel/AdmiltGetr/@x.id" class="button border with-icon">Güncelle (Detaylı Gör)</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    @*<a href="~/KPanel/iletisimBilgiEkle" class="button border with-icon">İletisşim Bilgi Ekle</a>*@
+</div>

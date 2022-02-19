@@ -1,0 +1,31 @@
+﻿@using MobilyaProje.Models
+@model List<Surecimiz>
+@{
+    ViewBag.Title = "AdmSurecimiz";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="width:100%" ; class="col-md-12 table table-hover">
+    <h3>Sürecimiz Kısmı</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Sürecimiz1</th>
+            <th>Sürecimiz2</th>
+            <th>Sürecimiz3</th>
+            @*<th>Sil</th>*@
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Surec</td>
+                <td>@x.Surec1</td>
+                <td>@x.Surec2</td>
+                @*<td><a href="~/KPanel/AdmSurecimizSil/@x.id" onclick="return confirm('Bunu Silmek İstediginizden Emin misin?  @x.Surec ')" class="button border with-icon" style="background-color:#ff0000; color:#fff">Sil</a></td>*@
+                <td><a href="~/KPanel/AdmSurecimizGetr/@x.id" class="button border with-icon">Düzenle</a></td>
+            </tr>
+        }
+    </table>
+    @*<a href="/KPanel/AdmSurecimizEkle/" class="button border with-icon">Yeni Süreç Ekle</a>*@
+
+</div>

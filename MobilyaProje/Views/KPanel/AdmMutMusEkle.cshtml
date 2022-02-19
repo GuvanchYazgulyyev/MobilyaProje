@@ -1,0 +1,36 @@
+﻿@model MobilyaProje.Models.MusteriYorum
+@{
+    ViewBag.Title = "AdmMutMusEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h3>Yeni Yorum Ekle</h3>
+
+
+<div class="col-md-12" id="div-boyut">
+    @using (Html.BeginForm("AdmMutMusEkle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <form method="post">
+            <div>
+                <label><b>Ad Soyad</b></label>
+                <input type="text" name="AdSoyad"  placeholder="Ad Soyad Giriniz..." class="form-control" />
+            </div>
+          
+            <div>
+                <label><b> Yorum</b></label>
+                @Html.TextAreaFor(x => x.Yorum, 0,5, new { @class = "form-control" })
+
+            </div>
+         
+            @Html.HiddenFor(x => x.id)
+
+            <div>
+                <button class="button border with-icon">Yeni Yorum Ekle</button>
+            </div>
+            <br />
+        </form>
+    }
+</div>
+
+

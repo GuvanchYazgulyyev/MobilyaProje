@@ -1,0 +1,59 @@
+﻿@model  MobilyaProje.Models.Blok
+@{
+    ViewBag.Title = "AdminBGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+<h3>Blog Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("UrunGuncelle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="div-boyut">
+        <label><b>Blog Başlıgı</b></label>
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    </div>
+    <div>
+        <label><b>İçerik</b></label>
+        @Html.TextAreaFor(x => x.icerik, 3, 0, new { @class = "form-control" })
+
+    </div>
+    <div>
+        <label><b>içerik2</b></label>
+        @Html.TextAreaFor(x => x.icerik1, 3, 0, new { @class = "form-control" })
+    </div>
+    <div>
+        <label><b>İçerik 3</b></label>
+        @Html.TextAreaFor(x => x.icerik2, 3, 0, new { @class = "form-control" })
+    </div>
+    <div>
+        <label><b>Resim</b></label>
+        <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+
+    </div>
+    
+    <div>
+        <label><b>Gün</b></label>
+        @Html.TextBoxFor(x => x.Gun, new { @class = "form-control" })
+    </div>
+     
+    <div>
+        <label><b>Ay</b></label>
+        @Html.TextBoxFor(x => x.Ay, new { @class = "form-control" })
+    </div>
+
+    <div>
+        @Html.HiddenFor(x => x.id)
+    </div>
+    <div>
+        <button class="button border with-icon">Değişiklikleri Kaydet</button>
+        <br />
+        <br />
+    </div>
+
+
+}
+

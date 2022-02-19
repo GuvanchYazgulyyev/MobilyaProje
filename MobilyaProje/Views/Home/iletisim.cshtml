@@ -1,0 +1,82 @@
+﻿@using MobilyaProje.Models
+@model List<iletisim>
+@{
+    ViewBag.Title = "iletisim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var x in Model)
+{
+
+    <!-- subheader begin -->
+    <section id="subheader" data-speed="8" data-type="background"
+             style="background-image: url('@x.Banner');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-wrap">
+                        <h1>@x.Slogan</h1>
+                    </div>
+                    <ul class="crumb"><li><a rel="v:url" property="v:title" href="~/Home/Index/">AnaSayfa</a></li> <b>/</b> <li class="active">İletişim</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subheader close -->
+
+
+
+    <section class="wpb_row vc_row-fluid vc_custom_1438577278176 no-padding">
+        <div class="row">
+
+
+            <iframe src="@x.Maps" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+        </div>
+    </section>
+
+
+    <section class="wpb_row vc_row-fluid vc_custom_1438577300524">
+        <div class="container">
+            <div class="row">
+                <div class="wpb_column vc_column_container vc_col-sm-8">
+                    <div class="vc_column-inner ">
+                        <div class="wpb_wrapper wow fadeInLeft">
+                            <br />
+                            <h3 style="">@x.MesajSlogan</h3>
+                            <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div><div role="form" class="wpcf7" id="wpcf7-f283-p256-o1" lang="en-US" dir="ltr">
+                                <div class="screen-reader-response"> <ul></ul></div>
+                                @Html.Action("Mesaj","Home")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpb_column vc_column_container vc_col-sm-4">
+                    <div class="vc_column-inner ">
+                        <div class="wpb_wrapper wow fadeInRight">
+                            <br />
+                            <h3 style="">@x.iletisimBaslik</h3>
+
+                            <div class="wpb_text_column wpb_content_element">
+                                <div class="wpb_wrapper">
+                                    <address>
+                                        <div><a href="@x.Maps" style="text-decoration:none">@x.Adres</a></div>
+                                        <div><strong>Telefon:</strong><a href="Tel:@x.Telefon" style="text-decoration:none">@x.Telefon</a></div>
+                                        <div><strong>E-posta:</strong><a href="mailto:@x.Eposta" style="text-decoration:none">@x.Eposta</a></div>
+                                        <div><strong>Web:</strong><a href="@x.web" style="text-decoration:none">@x.web</a></div>
+                                        
+                                        <div><strong>Açık:</strong>@x.CalismaSaatleri</div>
+                                    </address>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+

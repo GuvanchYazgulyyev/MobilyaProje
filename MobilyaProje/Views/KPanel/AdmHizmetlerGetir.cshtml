@@ -1,0 +1,53 @@
+﻿@model MobilyaProje.Models.Hizmetler
+@{
+    ViewBag.Title = "AdmHizmetlerGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3> Hizmet Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("AdmHizmetlerGuncelle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div id="div-boyut">
+
+    <div>
+        <label><b>Slogan</b></label>
+        @Html.TextBoxFor(x => x.Slogan, new { @class = "form-control" })
+    </div>
+    <div>
+        <label><b>Başlık</b></label>
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    </div>
+
+
+    <div>
+        <label><b>İçerik</b></label>
+        @Html.TextAreaFor(x => x.icerik, 4, 0, new { @class = "form-control" })
+    </div>
+    <div>
+        <label><b>Resim</b></label>
+
+        <input type="file" name="Resim" />
+    </div>
+    <div>
+        <label><b>Resim 2</b></label>
+
+        <input type="file" name="Resim1" />
+    </div>
+    <div>
+        <label><b>Resim 3</b></label>
+
+        <input type="file" name="Resim2" />
+    </div>
+    @Html.HiddenFor(x => x.id)
+    <div>
+        <button class="button border with-icon">Değişiklikleri Kaydet</button>
+        <br />
+        <br />
+    </div>
+</div>
+
+
+}
+
+

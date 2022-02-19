@@ -1,0 +1,15 @@
+﻿@using MobilyaProje.Models
+@model List<iletisim>
+
+@foreach (var x in Model)
+{
+<address>
+    <span><a href="@x.Maps" style="text-decoration:none">@x.Adres</a></span>
+    <span><strong>Telefon:</strong><a href="Tel:@x.Telefon" style="text-decoration:none;">@x.Telefon</a></span>
+    <span><strong>E-posta:</strong><a href="mailto:@x.Eposta" style="text-decoration:none">@x.Eposta</a></span>
+    <span><strong>Web:</strong><a target="_blank" href="@x.web" rel="noopener"  style="text-decoration:none">@x.web</a></span>
+    <span><strong>Açık:</strong>@x.CalismaSaatleri</span>
+</address>
+}
+
+

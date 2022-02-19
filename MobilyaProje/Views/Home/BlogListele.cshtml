@@ -1,0 +1,36 @@
+﻿@using MobilyaProje.Models
+@model List<Blok>
+
+@foreach (var x in Model)
+{
+
+
+
+   
+        <div class="post-content">
+            <div class="post-image">
+
+                <img src="@x.Resim" alt="">
+
+            </div>
+            <div class="date-box">
+                <div class="day">@x.Gun</div>
+                @if (x.Ay.Length > 3)
+                {
+                    <div class="month">@x.Ay.Substring(0, 3)</div>
+                }
+                else
+                {
+                    <div class="month">@x.Ay</div>
+                }
+
+            </div>
+            <div class="post-text">
+                <h3><a href="/Home/BlogDetay/@x.id">@x.Baslik</a></h3>
+                <p>@x.icerik</p>
+            </div>
+            <a href="/Home/BlogDetay/@x.id" class="btn-more">Devamını Oku</a>
+        </div>
+   
+
+}

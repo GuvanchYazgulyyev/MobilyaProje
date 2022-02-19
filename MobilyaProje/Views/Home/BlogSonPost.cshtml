@@ -1,0 +1,13 @@
+﻿@using MobilyaProje.Models
+@model List<Blok>
+
+@foreach (var x in Model)
+{
+    <ul>
+        <li>
+            <a href="/Home/BlogDetay/@x.id">@x.Baslik</a>
+        </li>
+
+    </ul>
+}
+

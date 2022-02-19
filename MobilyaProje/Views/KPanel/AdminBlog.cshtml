@@ -1,0 +1,39 @@
+﻿@using MobilyaProje.Models
+@model List<Blok>
+@{
+    ViewBag.Title = "AdminBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div style="width:100%" ; class="col-md-12 table table-hover">
+    <h3>Bloglar</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Blog Başlıgı</th>
+            <th>Resim</th>
+            <th>Gün</th>
+            <th>Ay</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                @*<td>@x.id</td>*@
+                <td>@x.Baslik</td>
+
+                <td><img src="@x.Resim" width="100px;" alt="Alternate Text" /></td>
+                @*<td>@x.icerik2</td>*@
+                <td>@x.Gun</td>
+                <td>@x.Ay</td>
+                <td><a href="/KPanel/AdminBSil/@x.id" class="button border with-icon" onclick="return confirm('Bunu Silmek İstediginizden Emin misin? @x.Baslik ')" style="background-color:#ff0000; color:#fff">Sil</a></td>
+                <td><a href="/KPanel/AdminBGetir/@x.id" class="button border with-icon">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/KPanel/AdminBEkle/" class="button border with-icon">Yeni Blog Ekle</a>
+
+</div>
+

@@ -1,0 +1,24 @@
+﻿@using MobilyaProje.Models
+@model List<Hakkimizda>
+
+@foreach (var x in Model)
+{
+    <div class="col-md-4 col-sm-4">
+        <div id="custom_html-2" class="widget_text widget widget_custom_html">
+            <div class="textwidget custom-html-widget">
+                <img style="height:60px" src="~/Resimler/kalarlogoyeni.png" alt=""><br /><br />
+                @*@x.icerik*@
+                @if (x.icerik.Length > 250)
+                {
+                    @x.icerik.Substring(0, 250)
+                }
+                else
+                {
+                    @x.icerik
+                }
+
+            </div>
+        </div>
+    </div>
+}
+

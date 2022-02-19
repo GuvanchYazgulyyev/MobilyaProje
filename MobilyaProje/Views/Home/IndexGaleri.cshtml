@@ -1,0 +1,27 @@
+﻿@using MobilyaProje.Models
+@model List<Galeriicerik>
+
+
+
+@foreach (var x in Model)
+{
+
+    <!-- gallery item -->
+    <div class="item commercial ">
+        <div class="picframe" style="margin:0px">
+            <a class="simple-ajax-popup-align-top" href="/Home/GaleriDetay/@x.id">
+                <span class="overlay">
+                    <span class="pf_text">
+                        <span class="project-name">@x.Baslik</span>
+                    </span>
+                </span>
+            </a>
+            <img width="700" height="466" src="@x.Resim" class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image" alt="" loading="lazy" 700w, 300w" sizes="(max-width: 700px) 100vw, 700px" />
+        </div>
+
+    </div>
+    <!-- close gallery item -->
+}
+
+
+

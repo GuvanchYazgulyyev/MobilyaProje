@@ -1,0 +1,36 @@
+﻿@model MobilyaProje.Models.MusteriYorum
+@{
+    ViewBag.Title = "AdmMutMusGetr";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Yorumlar Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("AdmMutMusGuncelle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="div-boyut">
+        <label><b>Ad Soyad</b></label>
+        @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+    </div>
+
+  
+    <div>
+        <label><b>İçerik</b></label>
+        @Html.TextAreaFor(x => x.Yorum,0,4, new { @class = "form-control" })
+
+    </div>
+ 
+
+    <div>
+        @Html.HiddenFor(x => x.id)
+    </div>
+    <div>
+        <button class="button border with-icon">Değişiklikleri Kaydet</button>
+        <br />
+        <br />
+    </div>
+
+
+}
+
+

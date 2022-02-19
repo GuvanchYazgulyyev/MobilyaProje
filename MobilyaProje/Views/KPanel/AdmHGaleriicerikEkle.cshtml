@@ -1,0 +1,55 @@
+﻿@model MobilyaProje.Models.Galeriicerik
+@{
+    ViewBag.Title = "AdmHGaleriicerikEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Galeri İçerik Ekle</h2>
+<div class="col-md-12">
+    @using (Html.BeginForm("AdmHGaleriicerikEkle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    <form class="form-group" method="post">
+
+        <br />
+        Başlık
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+
+        <br />
+        Alt Başlık
+        @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+
+        <br />
+        Tarih
+        @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+        <br />
+        Konum
+        @Html.TextBoxFor(x => x.Konum, new { @class = "form-control" })
+        <br />
+        Deger
+        @Html.TextBoxFor(x => x.Deger, new { @class = "form-control" })
+        <br />
+        Müşteri
+        @Html.TextBoxFor(x => x.Musteri, new { @class = "form-control" })
+        <br />
+        Kategori
+        @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
+        <br />
+        İçerik
+        <textarea name="icerik" cols="40" rows="3" class="form-control"></textarea>
+        <br />
+        İçerik2
+        <textarea name="icerik1" cols="40" rows="3" class="form-control"></textarea>
+
+        <br />
+        Resim
+        <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+        <br />
+
+        @Html.HiddenFor(x => x.id)
+
+        <button class="button border with-icon">Yeni İçerik Ekle</button>
+
+    </form>
+    }
+</div>

@@ -1,0 +1,18 @@
+﻿@using MobilyaProje.Models
+@model List<MusteriYorum>
+
+@foreach (var x in Model)
+{
+    <div class="col-md-6 item">
+        <div class="de_testi">
+            <blockquote>
+                <p>@x.Yorum</p>
+                <div class="de_testi_by">
+                    @x.AdSoyad
+                </div>
+            </blockquote>
+
+        </div>
+    </div>
+
+}

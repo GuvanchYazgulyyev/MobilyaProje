@@ -1,0 +1,39 @@
+﻿@using MobilyaProje.Models
+@model List<Galeriicerik>
+@{
+    ViewBag.Title = "AdmHGaleriicerik";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div style="width:100%" ; class="col-md-12 table table-hover">
+    <h3>Galeri İçerkleri</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Başlıgı</th>
+            <th>Resim</th>
+            <th>Tarih</th>
+            <th>Konum</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                @*<td>@x.id</td>*@
+                <td>@x.Baslik</td>
+
+                <td><img src="@x.Resim" width="100px;" alt="Alternate Text" /></td>
+                @*<td>@x.icerik2</td>*@
+                <td>@x.Tarih</td>
+                <td>@x.Konum</td>
+                <td><a href="/KPanel/AdmHGaleriicerikSil/@x.id" class="button border with-icon" onclick="return confirm('Bunu Silmek İstediginizden Emin misin? @x.Baslik ')" style="background-color:#ff0000; color:#fff">Sil</a></td>
+                <td><a href="/KPanel/AdmHGaleriicerikGetir/@x.id" class="button border with-icon">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/KPanel/AdmHGaleriicerikEkle/" class="button border with-icon">Yeni İçerik Ekle</a>
+
+</div>
+

@@ -1,0 +1,31 @@
+﻿@using MobilyaProje.Models
+@model List<iletisim>
+
+@foreach (var x in Model)
+{
+    <ul>
+        <li>
+            <a target="_blank" href="@x.Fecbook">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+
+
+        <li>
+            <a target="_blank" href="@x.instegram">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>
+
+
+        <li>
+            <a target="_blank" href="@x.Youtube">
+                <i class="fa fa-youtube"></i>
+            </a>
+        </li>
+        @*<li><a target="_blank" href="@x.web"><i class="fa fa-dribbble"></i></a></li>
+        <li><a target="_blank" href="@x.Eposta"><i class="fa fa-mail-reply-all"></i></a></li>
+        <li><a target="_blank" href="@x.Maps"><i class="fa fa-map-signs"></i></a></li>*@
+
+    </ul>
+}

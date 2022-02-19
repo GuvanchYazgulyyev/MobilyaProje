@@ -1,0 +1,51 @@
+﻿@model MobilyaProje.Models.Hakkimizda
+@{
+    ViewBag.Title = "HakkimizdaEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin:15px">
+
+
+    <h3>Hakkımda Yazı Sayfasını Ekle</h3>
+
+    @using (Html.BeginForm("HakkimizdaEkle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <form action="AdminHakguncelle" method="post">
+
+            <div id="div-boyut">
+                <label><b>Slogan</b></label>
+                @Html.TextBoxFor(x => x.Slogan, new { @class = "form-control" })
+            </div>
+            <div>
+                <label><b>Başlık </b></label>
+                @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+            </div>
+            <div>
+                <label><b>İçerik</b></label>
+                @Html.TextBoxFor(x => x.icerik, new { @class = "form-control" })
+            </div>
+
+
+            <div>
+                <label><b>Üst Resim</b></label>
+                <input type="file" name="Banner" />
+            </div>
+
+
+            <div>
+                <label><b>Resim</b></label>
+                <input type="file" name="Resim" />
+            </div>
+
+           
+            <div>
+                <button class="button border with-icon">Hakkkımızda Ekle</button>
+                <br />
+                <br />
+            </div>
+
+        </form>
+    }
+</div>
+

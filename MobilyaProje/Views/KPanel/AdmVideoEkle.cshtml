@@ -1,0 +1,36 @@
+﻿@model MobilyaProje.Models.Video
+@{
+    ViewBag.Title = "AdmVideoEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<h3>Video Ekle</h3>
+
+<div class="col-md-12" id="div-boyut">
+    @ViewBag.Message
+
+    @using (Html.BeginForm("AdmVideoEkle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <form method="post">
+
+            <div>
+                <label><b>Video Başlığı</b></label>
+                <input type="text" name="Resim" class="form-control" />
+            </div>
+
+            <div>
+                <label><b>Video Linkini giriniz (URL)</b></label>
+                <input type="text" name="Media" class="form-control" />
+            </div>
+
+
+            <div>
+                <button class="button border with-icon">Yeni Video Ekle</button>
+            </div>
+            <br />
+        </form>
+    }
+</div>

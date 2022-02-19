@@ -1,0 +1,28 @@
+﻿@model MobilyaProje.Models.Mesaj
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@if (TempData["iletisimmesaj"] != null)
+{
+    <script>
+        swal("Kayalartasarim.com", "Mesajınız Başarılı bir Şekilde Gönderilmiştir", "success");
+    </script>
+   
+}
+
+<form method="post" class="wpcf7-form init">
+    <div class="row">
+        <div class="col-md-4">
+            <div><span class="wpcf7-form-control-wrap your-name"><input type="text" name="AdSoyad" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ad Soyad" required="" /></span> </div>
+            <div><span class="wpcf7-form-control-wrap email-453"><input type="email" name="Eposta" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-posta" required="" /></span> </div>
+            <div><span class="wpcf7-form-control-wrap tel-565"><input type="tel" name="Telefon" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Telefon" required="" /></span></div>
+        </div>
+        <div class="col-md-8">
+            <div><span class="wpcf7-form-control-wrap message"><textarea name="Mesajicerik" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Mesajınız" required=""></textarea></span></div>
+        </div>
+        <div class="col-md-12">
+            <p id="submit"><input type="submit" value="Mesaj Gönder" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-line" /></p>
+        </div>
+    </div>
+    <div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>

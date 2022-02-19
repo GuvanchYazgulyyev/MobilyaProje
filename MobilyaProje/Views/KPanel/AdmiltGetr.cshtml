@@ -1,0 +1,88 @@
+﻿@model MobilyaProje.Models.iletisim
+@{
+    ViewBag.Title = "AdmiltGetr";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3> İletişim Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("AdmiltGuncelle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="div-boyut">
+
+        <div>
+            <label><b>Slogan</b></label>
+            @Html.TextBoxFor(x => x.Slogan, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b>Hatita</b></label>
+            @Html.TextBoxFor(x => x.Maps, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b>Mesaj Slogan</b></label>
+            @Html.TextBoxFor(x => x.MesajSlogan, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>İletişim Başlık</b></label>
+            @Html.TextBoxFor(x => x.iletisimBaslik, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b>Resim</b></label>
+
+            <input type="file" name="Banner" />
+        </div>
+        <div>
+            <label><b>Adres</b></label>
+            @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b>Telefon</b></label>
+            @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>E Posta</b></label>
+            @Html.TextBoxFor(x => x.Eposta, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>Web Site Adres</b></label>
+            @Html.TextBoxFor(x => x.web, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>Çalışma Saatleri</b></label>
+            @Html.TextBoxFor(x => x.CalismaSaatleri, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>Facebook</b></label>
+            @Html.TextBoxFor(x => x.Fecbook, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>İnstegram</b></label>
+            @Html.TextBoxFor(x => x.instegram, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>YouTube</b></label>
+            @Html.TextBoxFor(x => x.Youtube, new { @class = "form-control" })
+        </div>
+
+
+        @Html.HiddenFor(x=>x.id)
+
+        <div>
+            <button class="button border with-icon">Değişiklikleri Kaydet</button>
+            <br />
+            <br />
+        </div>
+    </div>
+
+
+}
+
+
+

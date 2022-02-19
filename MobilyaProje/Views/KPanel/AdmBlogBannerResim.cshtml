@@ -1,0 +1,32 @@
+﻿@using MobilyaProje.Models
+@model List<BlokSayfa>
+@{
+    ViewBag.Title = "AdmBlogBannerResim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div style="width:100%" ; class="col-md-12 table table-hover">
+    <h3>Bloglar</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Slogan</th>
+            <th>Resim</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                @*<td>@x.id</td>*@
+                <td>@x.Slogan</td>
+
+                <td><img src="@x.Banner" width="100px;" alt="Alternate Text" /></td>
+
+                <td><a href="/KPanel/AdmBlogBannerResimGetir/@x.id" class="button border with-icon">Değiştir</a></td>
+            </tr>
+        }
+    </table>
+
+</div>
+

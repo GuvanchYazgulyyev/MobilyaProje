@@ -1,0 +1,73 @@
+﻿@using MobilyaProje.Models
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "AdiminHakYazi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="width:100%" ; class="col-md-12 table table-hover">
+    @*<h2 style="color:red;">Dikkat! Veriler silindikten sonra Extra veri ekleyemezsiniz, Bu yüzden verileri GÜNCELLE yöntemini tercih ediniz!</h2>*@
+    <h3>Hakkımda (Yazıları)</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Slogan</th>
+            <th>Banner(Üst Resim)</th>
+            <th>Başlık</th>
+            <th>Resim</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+
+                @if (!String.IsNullOrEmpty(x.Slogan))
+                {
+                    <td>@x.Slogan</td>
+                }
+                else
+                {
+                    <td>Belirtilmemiş</td>
+                }
+
+                @if (!String.IsNullOrEmpty(x.Banner))
+                {
+                    <td>
+                        <img src="@x.Banner" width="90px;" />
+                    </td>
+                }
+                else
+                {
+                    <td>Belirtilmemiş</td>
+                }
+
+                @if (!String.IsNullOrEmpty(x.Baslik))
+                {
+                    <td>@x.Baslik</td>
+                }
+                else
+                {
+                    <td>Belirtilmemiş</td>
+                }
+
+                @if (!String.IsNullOrEmpty(x.Resim))
+                {
+                    <td>
+                        <img src="@x.Resim" width="100px;" />
+
+                    </td>
+                }
+                else
+                {
+                    <td>Belirtilmemiş</td>
+                }
+
+
+                <td><a href="~/KPanel/AdminHakGetir/@x.id" class="button border with-icon">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+
+    <a href="~/Kpanel/HakkimizdaEkle/" class="btn btn-default">Yeni Hakkımızda</a>
+
+
+</div>

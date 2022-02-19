@@ -1,0 +1,10 @@
+﻿
+@using MobilyaProje.Models
+@model List<Galeri>
+
+@foreach (var x in Model)
+{
+    <figure class="wpb_wrapper vc_figure">
+        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1024" height="637" src="@x.Resim" class="vc_single_image-img attachment-full" alt="" loading="lazy" 1024w, 300w, 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></div>
+    </figure>
+}

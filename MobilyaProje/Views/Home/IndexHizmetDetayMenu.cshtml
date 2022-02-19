@@ -1,0 +1,10 @@
+﻿@using MobilyaProje.Models
+@model List<NeYapiyoruz>
+
+
+    @foreach (var x in Model)
+    {
+        <li id="menu-item-1243" class="menu-item menu-item-type-post_type menu-item-object-service current-menu-item menu-item-1243 active"><a title="&lt;b&gt;Residential&lt;/b&gt; Design" href="~/Home/IndexHizmetDetay/@x.id"><b>@x.Baslik1</b> @x.Baslik</a></li>
+
+    }
+

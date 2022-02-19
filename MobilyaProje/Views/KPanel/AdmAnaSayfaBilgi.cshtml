@@ -1,0 +1,34 @@
+﻿@using MobilyaProje.Models
+@model List<AnaSayfa>
+@{
+    ViewBag.Title = "AdmAnaSayfaBilgi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div style="width:100%" ; class="col-md-12 table table-hover">
+    <h3>Ana Sayfa Bilgileri</h3>
+    <table class="table table-
+           ">
+        <tr>
+            <th>Büyük Slogan</th>
+            <th>Büyük Slogan2</th>
+            <th>Küçük Slogan</th>
+            <th>Küçük Slogan2</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.SloganBuyuk</td>
+                <td>@x.SloganBuyuk1</td>
+                <td>@x.SloganKucuk</td>
+                <td>@x.SloganKucuk1</td>
+                @*<td>@x.AdminYetki.YetkiAd</td>*@
+                <td><a href="~/KPanel/AdmAnaSayfaBilgiGetir/@x.id" class="button border with-icon">Düzenle</a></td>
+            </tr>
+        }
+    </table>
+
+</div>
+

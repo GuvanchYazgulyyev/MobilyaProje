@@ -1,0 +1,97 @@
+﻿@using MobilyaProje.Models
+@model List<BlokSayfa>
+
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var x in Model)
+{
+
+    <!-- subheader begin -->
+    <section id="subheader" data-speed="8" data-type="background" class="padding-top-bottom"
+             style="background-image: url('@x.Banner');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-wrap">
+                        <h1>@x.Slogan</h1>
+                    </div>
+                    <ul class="crumb">
+                    <li><a rel="v:url" property="v:title" href="/">AnaSayfa</a>
+                        </li> <b>/</b> <li class="active">Blog</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subheader close -->
+    <!-- content begin -->
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <ul class="blog-list">
+                        <li class="wow fadeInUp">
+                            @Html.Action("BlogListele", "Home")
+
+                            <script type="text/javascript">
+                                (function ($) {
+                                    "use strict";
+                                    $(document).ready(function () {
+                                        $("#owl-demo-40").owlCarousel({
+                                            items: 1,
+                                            autoPlay: true,
+                                            slideSpeed: 200,
+                                            paginationSpeed: 800,
+                                            rewindSpeed: 1000,
+                                            singleItem: true,
+                                            transitionStyle: false,
+                                        });
+                                    });
+                                })(this.jQuery);
+                            </script>
+                        </li>
+                    </ul>
+
+                    @*<div class="pagination text-center ">
+                            <ul class="pagination">
+
+                                <li><span aria-current="page" class="page-numbers current">1</span></li>
+                                <li><a class="page-numbers" href="page/2/index.html">2</a></li>
+                                <li><a class="next page-numbers" href="page/2/index.html"><i class="fa fa-angle-double-right"></i></a></li>
+                            </ul>
+
+                        </div>*@
+                </div>
+
+
+                <div class="col-md-4">
+                    <div id="sidebar" class="sidebar">
+                        <div id="search-2" class="widget widget_search">
+                            @*<form role="search">
+                                <input type="search" id="search" class="search-field form-control" value="" name="s" placeholder="Ara" />
+                                <button id="btn-search" type="submit"></button>
+                                <div class="clearfix"></div>
+                            </form>*@
+                        </div>
+                        <div id="recent-posts-2" class="widget widget_recent_entries">
+                            <h4>Son Postlar</h4><div class="small-border"></div>
+
+                            @Html.Action("BlogSonPost", "Home")
+
+                        </div><div id="text-1" class="widget widget_text">
+                           
+                            @Html.Action("BlogHakkimizda", "Home")
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- content close -->
+}

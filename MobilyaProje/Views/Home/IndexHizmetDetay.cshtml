@@ -1,0 +1,130 @@
+﻿@using MobilyaProje.Models
+@model List<NeYapiyoruz>
+
+@{
+    ViewBag.Title = "IndexHizmetDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var x in Model)
+{
+
+
+    <section id="subheader" data-speed="8" data-type="background" class="padding-top-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-wrap">
+                        <h1><b>@x.Slogan</b></h1>
+                    </div>
+                    <ul class="crumb"><li><a rel="v:url" property="v:title" href="~/Home/Index">Ana Sayfa</a></li> <b>/</b> <li><a rel="v:url" property="v:title" href="#">@x.Baslik</a></li> <b>/</b> <li class="active"><b>@x.Baslik1</b></li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subheader close -->
+
+
+
+
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="services-list">
+                    @Html.Action("IndexHizmetDetayMenu", "Home")
+                    @Html.Action("IndexHizmetDetayMenuAlt", "Home")
+                </ul>
+
+            </div>
+
+            <div class="col-md-9">
+                <section class="wpb_row vc_row-fluid vc_custom_1439545503777 no-padding">
+                    <div class="row">
+                        <div class="wpb_column vc_column_container vc_col-sm-6">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper ">
+                                    <div class="wpb_text_column wpb_content_element ">
+                                        <div class="wpb_wrapper">
+                                            <p>@x.icerik</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="wpb_column vc_column_container vc_col-sm-6">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper ">
+                                    <div class="wpb_single_image wpb_content_element vc_align_left">
+
+                                        <figure class="wpb_wrapper vc_figure">
+                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="700" height="466" src="@x.Resim" class="vc_single_image-img attachment-full" alt="" 700w, 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+                                        </figure>
+                                    </div>
+
+                                    <div class="wpb_single_image wpb_content_element vc_align_left">
+
+                                        <figure class="wpb_wrapper vc_figure">
+                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="700" height="466" src="@x.Resim1" class="vc_single_image-img attachment-full" alt="" 700w, 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <section class="wpb_row vc_row-fluid no-padding">
+        <div class="row">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper ">
+
+                        <div class="container">
+                            <!-- portfolio filter begin -->
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper wow fadeInUp">
+                                        <br />
+                                        <h1 style="text-align: center;">Resimlermize Göz Atın</h1>
+
+
+                                        <div class="separator "><span><i class="fa fa-circle"></i></span></div>
+                                        <div class="spacer-single"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- portfolio filter close -->
+                        </div>
+                        <div id="gallery" class=" gallery full-gallery de-gallery pf_full_width  wow fadeInUp" data-wow-delay=".3s" style="margin:0px 0px">
+
+                            @Html.Action("IndexGaleri", "Home")
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

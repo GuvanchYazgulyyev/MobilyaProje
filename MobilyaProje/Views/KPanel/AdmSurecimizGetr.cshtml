@@ -1,0 +1,69 @@
+﻿@model MobilyaProje.Models.Surecimiz
+@{
+    ViewBag.Title = "AdmSurecimizGetr";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Sürecimiz Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("AdmSurecimizGuncelle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="div-boyut">
+        <label><b>Süreç Başlık</b></label>
+        @Html.TextBoxFor(x => x.Surec, new { @class = "form-control" })
+    </div>
+    <div>
+        <label><b>İçerik</b></label>
+        @Html.TextAreaFor(x => x.icerik, 0, 4, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <label><b>Süreç Başlık2</b></label>
+        @Html.TextBoxFor(x => x.Surec1, new { @class = "form-control" })
+
+    </div>
+    <div>
+        <label><b>İçerik2</b></label>
+        @Html.TextAreaFor(x => x.icerik1, 0, 4, new { @class = "form-control" })
+
+    </div>
+    <div>
+        <label><b>Süreç Başlık3</b></label>
+        @Html.TextBoxFor(x => x.Surec2, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <label><b>İçerik3</b></label>
+        @Html.TextAreaFor(x => x.iceri2, 0, 2, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <label><b>Süreç Başlık4</b></label>
+        @Html.TextBoxFor(x => x.Surec3, new { @class = "form-control" })
+
+    </div>
+
+
+    <div>
+        <label><b>İçerik4</b></label>
+        @Html.TextAreaFor(x => x.icerik3, 0, 4, new { @class = "form-control" })
+
+    </div>
+
+
+    <div>
+        @Html.HiddenFor(x => x.id)
+    </div>
+    <div>
+        <button class="button border with-icon">Değişiklikleri Kaydet</button>
+        <br />
+        <br />
+    </div>
+
+
+}
+
+

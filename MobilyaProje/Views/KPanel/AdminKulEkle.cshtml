@@ -1,0 +1,46 @@
+﻿@model MobilyaProje.Models.Admin
+@{
+    ViewBag.Title = "AdminKulEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+<h2>Yeni Kullanıcı Ekle</h2>
+<div class="col-md-12">
+    @using (Html.BeginForm("AdminKulEkle", "KPanel", FormMethod.Post))
+    {
+        <form class="form-group" method="post">
+            <b>Ad Soyad</b>
+            @*@Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })*@
+            <input type="text" name="AdSoyad" maxlength="90" required="" class="form-control" />
+
+
+            <b>Telefon</b>
+            @*@Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })*@
+            <input type="text" name="Telefon" required="" class="form-control" />
+
+            <b>
+                E-Posta
+            </b>
+            @*</b>@Html.TextBoxFor(x => x.EPosta, new { @class = "form-control" })*@
+            <input type="email" name="Kullanici" maxlength="50" required="" class="form-control" />
+
+            <b>
+                Şifre
+            </b>
+            @*@Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })*@
+            <input type="text" name="Sifre" maxlength="50" required="" class="form-control" />
+
+
+            @Html.HiddenFor(x => x.id)
+            <br />
+            @*@Html.MathCaptcha()*@
+
+            <button class="button border with-icon">Yeni Kullanıcı Ekle</button>
+
+        </form>
+    }
+</div>

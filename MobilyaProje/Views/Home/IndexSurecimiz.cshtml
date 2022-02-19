@@ -1,0 +1,56 @@
+﻿@using MobilyaProje.Models
+@model List<Surecimiz>
+
+
+
+
+@foreach (var x in Model)
+{
+    <ul class="de_nav ">
+
+        @*<li class="active wow fadeIn" data-wow-delay="0.4s">
+                <span>@x.Surec</span>
+
+                <div class="v-border"></div>
+            </li>*@
+        <li class="wow fadeIn" data-wow-delay="0.4s">
+            <span style="font-size:12px">@x.Surec</span>
+
+            <div class="v-border"></div>    
+        </li>
+
+        <li class=" wow fadeIn" data-wow-delay="0.8s">
+            <span style="font-size:12px">@x.Surec1</span>
+
+            <div class="v-border"></div>
+        </li>
+
+        <li class=" wow fadeIn" data-wow-delay="1.2s">
+            <span style="font-size:12px">@x.Surec2</span>
+
+            <div class="v-border"></div>
+        </li>
+
+    </ul>
+
+    <div class="de_tab_content">
+        <div id="tab-615" class="de_tab_content_inner">
+            <p>@x.icerik</p>
+        </div>
+        <div id="tab-616" class="de_tab_content_inner">
+            <p>@x.icerik1</p>
+        </div>
+        <div id="tab-617" class="de_tab_content_inner">
+            <p>@x.iceri2</p>
+        </div>
+        <div id="tab-618" class="de_tab_content_inner">
+            <p>@x.icerik3</p>
+        </div>
+    </div>
+}
+
+
+
+
+
+

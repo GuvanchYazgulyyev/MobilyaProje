@@ -1,0 +1,96 @@
+﻿@using MobilyaProje.Models
+@model List<Blok>
+@{
+    ViewBag.Title = "BlogDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@foreach (var x in Model)
+{
+
+    <!-- CONTENT BLOG -->
+    <div id="content">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-md-8">
+
+                    <ul class="blog-list">
+                        <li class="single">
+                            <div class="post-content">
+                                <div class="post-image">
+
+                                    <img src="@x.Resim" alt="">
+
+                                </div>
+                                <div class="date-box">
+                                    <div class="day">@x.Gun</div>
+                                    @if (x.Ay.Length > 3)
+                                    {
+                                        <div class="month">@x.Ay.Substring(0, 3)</div>
+                                    }
+                                    else
+                                    {
+                                        <div class="month">@x.Ay</div>
+                                    }
+
+                                </div>
+                                <div class="post-text page-content">
+                                    <h3 class="single-title">@x.Baslik</h3>
+                                    <p>@x.icerik</p>
+                                    <blockquote><p>@x.icerik1</p></blockquote>
+                                    <p>@x.icerik2</p>
+
+                                </div>
+                            </div>
+
+                            <div class="post-info">
+
+                                <div class="share-holder">
+                                    <h4>Paylaş:</h4>
+                                    <div class="social-links rounded-share-icons">
+                                        <a class="facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=http://demo.archiwp.com/light-version/the-5-secrets-to-pulling-off-simple-minimal-design/"><i class="fa fa-facebook"></i></a>
+                                        <a class="twitter" target="_blank" href="https://twitter.com/share?text=The%205%20Secrets%20to%20Pulling%20Off%20Simple,%20Minimal%20Design"><i class="fa fa-twitter"></i></a>
+                                        <a class="linkedin" target="_blank" href="https://linkedin.com/shareArticle?mini=true&amp;url=http://demo.archiwp.com/light-version/the-5-secrets-to-pulling-off-simple-minimal-design/&amp;title=The%205%20Secrets%20to%20Pulling%20Off%20Simple,%20Minimal%20Design"><i class="fa fa-linkedin"></i></a>
+                                        <a class="pinterest" target="_blank" href="http://demo.archiwp.com/light-version/the-5-secrets-to-pulling-off-simple-minimal-design/&amp;description=The%205%20Secrets%20to%20Pulling%20Off%20Simple,%20Minimal%20Design&amp;media=http://demo.archiwp.com/light-version/wp-content/uploads/sites/2/2015/07/pic-blog-4.jpg"><i class="fa fa-pinterest"></i></a>
+                                        <a class="tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=http://demo.archiwp.com/light-version/the-5-secrets-to-pulling-off-simple-minimal-design/&amp;name=The%205%20Secrets%20to%20Pulling%20Off%20Simple,%20Minimal%20Design&amp;description=<p>Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipiscing%20elit.%20Nunc%20mattis%20ligula%20pellentesque%20nisi%20tristique%20porta.%20Vestibulum%20eget%20nisi%20est.%20Vivamus%20pharetra%20mattis%20ornare.%20Vestibulum%20ante%20ipsum%20primis%20in%20faucibus%20orci%20luctus%20et%20ultrices%20posuere%20cubilia%20Curae;%20Nunc%20eget%20nisl%20vel%20nisl%20pellentesque%20semper%20sed%20quis%20tellus.%20Integer%20euismod%20consequat%20ipsum%20eget%20congue.%20Aliquam%20sit%20amet%20[%e2%80%a6]</p>"><i class="fa fa-tumblr"></i></a>
+                                        <a class="google-plus" target="_blank" href="https://plus.google.com/share?url=http://demo.archiwp.com/light-version/the-5-secrets-to-pulling-off-simple-minimal-design/"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div id="sidebar" class="sidebar">
+                        <div id="search-2" class="widget widget_search">
+                            <form role="search" method="get" action="http://demo.archiwp.com/light-version/">
+                                <input type="search" id="search" class="search-field form-control" value="" name="s" placeholder="Ara" />
+                                <button id="btn-search" type="submit"></button>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                        <div id="recent-posts-2" class="widget widget_recent_entries">
+                            <h4>Son Postlar</h4><div class="small-border"></div>
+
+                            @Html.Action("BlogSonPost", "Home")
+
+                        </div><div id="text-1" class="widget widget_text">
+
+                            @Html.Action("BlogHakkimizda", "Home")
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- END CONTENT BLOG -->
+
+}

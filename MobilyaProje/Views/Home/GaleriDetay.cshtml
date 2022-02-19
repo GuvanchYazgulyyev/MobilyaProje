@@ -1,0 +1,61 @@
+﻿@using MobilyaProje.Models
+@model List<Galeriicerik>
+@{
+    ViewBag.Title = "GaleriDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var x in Model)
+{
+    <div class="container project-view">
+        <section class="wpb_row vc_row-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column vc_column_container vc_col-sm-8">
+                        <div class="vc_column-inner ">
+
+                            <div class="wpb_wrapper ">
+                                <div class="wpb_single_image wpb_content_element vc_align_left">
+
+                                    <figure class="wpb_wrapper vc_figure">
+                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1024" height="678" src="@x.Resim" class="vc_single_image-img attachment-full" alt="" loading="lazy"  1024w,  300w,  768w" sizes="(max-width: 1024px) 100vw, 1024px" /></div>
+                                    </figure>
+                                </div>
+
+                                <div class="wpb_single_image wpb_content_element vc_align_left">
+
+                                   @Html.Action("GaleriDetayResim","Home")
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="wpb_column vc_column_container vc_col-sm-4">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper ">
+                                <div class="wpb_text_column wpb_content_element ">
+                                    <div class="wpb_wrapper">
+                                        <div class="project-info">
+                                            <h2>@x.Baslik</h2>
+                                            <div class="details">
+                                                <div class="info-text"><span class="title">Tarih</span><span class="val">@x.Tarih</span></div>
+                                                <div class="info-text"><span class="title">Yer</span><span class="val">@x.Konum</span></div>
+                                                <div class="info-text"><span class="title">Değeri</span><span class="val">@x.Deger</span></div>
+                                                <div class="info-text"><span class="title">Müşteri</span><span class="val">@x.Musteri</span></div>
+                                                <div class="info-text"><span class="title">Kategori</span><span class="val">@x.Kategori</span></div>
+                                            </div>
+                                            <p>@x.icerik</p>
+                                            <h4>@x.AltBaslik</h4>
+                                            <p>@x.icerik1</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+}
+
+

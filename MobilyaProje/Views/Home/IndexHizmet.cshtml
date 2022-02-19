@@ -1,0 +1,30 @@
+﻿@using MobilyaProje.Models
+@model List<NeYapiyoruz>
+
+
+@foreach (var x in Model)
+{
+
+<div class="col-md-3 item">
+
+    <h3><b>@x.Baslik1</b> @*@x.Baslik1*@</h3>
+
+    <div class="spacer-single-10"></div>
+    <a href="~/Home/IndexHizmetDetay/@x.id"><img width="700" height="337" src="@x.Resim" class="img-responsive wp-post-image" alt="" sizes="(max-width: 700px) 100vw, 700px" /></a>
+    <div class="spacer-single"></div>
+    @if (@x.icerik.Length > 150)
+    {
+        <p>@x.icerik.Substring(0, 150)...</p>
+    }
+    else
+    {
+        <p>@x.icerik</p>
+    }
+
+
+
+    <a href="~/Home/IndexHizmetDetay/@x.id" class="btn-line btn-fullwidth">Hizmeti İncele</a>
+
+</div>
+
+}

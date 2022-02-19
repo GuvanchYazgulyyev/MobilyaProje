@@ -1,0 +1,18 @@
+﻿@using MobilyaProje.Models
+@model List<Hakkimizda>
+
+@foreach (var x in Model)
+{
+    <h4><a href="/Home/Hakkimizda/" style="text-decoration:none">@x.Slogan</a></h4><div class="small-border"></div>
+
+    if (x.icerik.Length > 249)
+    {
+        <div class="textwidget">@x.icerik.Substring(0, 250)</div>
+    }
+    else
+    {
+        <div class="textwidget">@x.icerik</div>
+    }
+
+}
+

@@ -1,0 +1,496 @@
+﻿@using MobilyaProje.Models
+@model List<AnaSayfa>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="wpb_row vc_row-fluid no-padding">
+    <div class="row">
+        <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+                <div class="wpb_wrapper ">
+                    <p class="rs-p-wp-fix"></p>
+                    @foreach (var x in Model)
+                    {
+                        <rs-module-wrap id="rev_slider_3_1_wrapper" data-source="gallery" style="background:#e9e9e9;padding:0;">
+                            <rs-module id="rev_slider_3_1" style="" data-version="6.2.6">
+                                <rs-slides>
+                                    <rs-slide data-key="rs-7" data-title="Slide 1" data-thumb="~/virin/demo.archiwp.com/light-version/wp-content/uploads/sites/2/2015/08/wide1-100x50.jpg" data-anim="ei:d;eo:d;s:500;r:0;t:fade;sl:10;">
+                                        <img src="@x.Banner" title="wide1" width="1400" height="802" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
+                                        <!--
+                                                -->
+                                        <rs-layer id="slider-3-slide-7-layer-1"
+                                                  class="big-white"
+                                                  data-type="text"
+                                                  data-color="rgba(255, 255, 255, 1)"
+                                                  data-rsp_ch="on"
+                                                  data-xy="x:l,c,c,c;yo:160px,300px,400px,300px;"
+                                                  data-text="s:16,15,15,14;l:22;ls:6px,5px,4px,4px;fw:300;"
+                                                  data-frame_0="y:-50;"
+                                                  data-frame_1="e:expo.inOut;st:400;sp:800;"
+                                                  data-frame_999="y:-50;o:0;st:w;sp:450;"
+                                                  style="z-index:8;font-family:Montserrat;text-transform:uppercase;">
+
+                                            @x.SloganKucuk
+
+
+                                        </rs-layer>
+                                        <!--
+
+                                        -->
+                                        <h2 id="slider-3-slide-7-layer-2"
+                                            class="rs-layer big-text"
+                                            data-type="text"
+                                            data-color="rgba(255, 255, 255, 1)"
+                                            data-rsp_ch="on"
+                                            data-xy="x:l,c,c,c;y:m;"
+                                            data-text="s:52,50,45,40;l:23,23,23,25;ls:5px,5px,5px,4px;fw:300;"
+                                            data-frame_0="sX:2;sY:2;"
+                                            data-frame_1="e:expo.inOut;st:400;sp:800;sR:400;"
+                                            data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;e:expo.inOut;st:w;sp:400;sR:4800;"
+                                            style="z-index:9;font-family:Montserrat;text-transform:uppercase;">
+
+                                            @x.SloganBuyuk
+
+
+                                        </h2>
+                                        <!--
+
+                                        -->
+                                        <a id="slider-3-slide-7-layer-11"
+                                           class="rs-layer rev-btn"
+                                           href="/Home/TalepOlustur" target="_self" rel="nofollow"
+                                           data-type="button"
+                                           data-rsp_ch="on"
+                                           data-xy="x:l,c,c,c;yo:335px,450px,540px,410px;"
+                                           data-text="w:normal;s:13,11,12,11;l:24,21,24,22;ls:3px,2px,1px,1px;fw:700,700,700,600;"
+                                           data-dim="minh:0px,none,none,none;"
+                                           data-padding="t:7,6,5,3;r:30,26,20,12;b:7,6,5,3;l:30,26,20,12;"
+                                           data-border="bos:solid;boc:#ffffff;bow:2px,2px,2px,2px;"
+                                           data-frame_0="y:50,43,32,19;"
+                                           data-frame_1="e:expo.inOut;st:800;sp:400;"
+                                           data-frame_999="y:50,43,32,19;o:0;st:w;sp:450;"
+                                           data-frame_hover="c:#222;bgc:#fff;boc:#fff;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;sp:300ms;e:default;"
+                                           style="z-index:10;background-color:rgba(0,0,0,0);font-family:Montserrat;text-transform:uppercase;">
+                                            Talep Oluştur
+                                        </a>
+                                        <!--
+                                        -->
+                                    </rs-slide>
+                                    <rs-slide data-key="rs-8" data-title="Slide 1" data-thumb="~/virin/demo.archiwp.com/light-version/wp-content/uploads/sites/2/2015/08/wide2-100x50.jpg" data-anim="ei:d;eo:d;s:500;r:0;t:fade;sl:10;">
+                                        <img src="@x.Banner1" title="wide2" width="1400" height="802" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
+                                        <!--
+                                                -->
+                                        <rs-layer id="slider-3-slide-8-layer-1"
+                                                  class="big-white"
+                                                  data-type="text"
+                                                  data-color="rgba(255, 255, 255, 1)"
+                                                  data-rsp_ch="on"
+                                                  data-xy="x:l,c,c,c;yo:160px,300px,400px,300px;"
+                                                  data-text="s:16,15,15,14;l:22;ls:6px,5px,4px,4px;fw:300;"
+                                                  data-frame_0="y:-50;"
+                                                  data-frame_1="e:expo.inOut;st:400;sp:800;"
+                                                  data-frame_999="y:-50;o:0;st:w;sp:450;"
+                                                  style="z-index:8;font-family:Montserrat;text-transform:uppercase;">
+                                            @x.SloganKucuk1
+                                        </rs-layer>
+                                        <!--
+
+                                        -->
+                                        <h2 id="slider-3-slide-8-layer-2"
+                                            class="rs-layer big-text"
+                                            data-type="text"
+                                            data-color="rgba(255, 255, 255, 1)"
+                                            data-rsp_ch="on"
+                                            data-xy="x:l,c,c,c;y:m;"
+                                            data-text="s:52,50,45,40;l:23,23,23,25;ls:6px,5px,5px,4px;fw:300;"
+                                            data-frame_0="sX:2;sY:2;"
+                                            data-frame_1="e:expo.inOut;st:400;sp:800;sR:400;"
+                                            data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;e:expo.inOut;st:w;sp:400;sR:4800;"
+                                            style="z-index:9;font-family:Montserrat;text-transform:uppercase;">
+                                            @x.SloganBuyuk1
+                                        </h2>
+                                        <!--
+
+                                        -->
+                                        <a id="slider-3-slide-8-layer-11"
+                                           class="rs-layer rev-btn"
+                                           href="/Home/TalepOlustur" target="_self" rel="nofollow"
+                                           data-type="button"
+                                           data-rsp_ch="on"
+                                           data-xy="x:l,c,c,c;yo:335px,450px,540px,410px;"
+                                           data-text="w:normal;s:13,11,12,11;l:24,21,24,22;ls:3px,2px,1px,1px;fw:700,700,700,600;"
+                                           data-dim="minh:0px,none,none,none;"
+                                           data-padding="t:7,6,5,3;r:30,26,20,12;b:7,6,5,3;l:30,26,20,12;"
+                                           data-border="bos:solid;boc:#ffffff;bow:2px,2px,2px,2px;"
+                                           data-frame_0="y:50,43,32,19;"
+                                           data-frame_1="e:expo.inOut;st:800;sp:400;"
+                                           data-frame_999="y:50,43,32,19;o:0;st:w;sp:450;"
+                                           data-frame_hover="c:#222;bgc:#fff;boc:#fff;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;sp:300ms;e:default;"
+                                           style="z-index:10;background-color:rgba(0,0,0,0);font-family:Montserrat;text-transform:uppercase;">
+                                            Talep Oluştur
+                                        </a>
+                                        <!--
+                                        -->
+                                    </rs-slide>
+                                    <rs-slide data-key="rs-9" data-title="Slide 1" data-thumb="~/virin/demo.archiwp.com/light-version/wp-content/uploads/sites/2/2015/08/wide3-100x50.jpg" data-anim="ei:d;eo:d;s:500;r:0;t:fade;sl:10;">
+                                        <img src="@x.Banner2" title="wide3" width="1400" height="802" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
+                                        <!--
+                                                -->
+                                        <rs-layer id="slider-3-slide-9-layer-1"
+                                                  class="big-white"
+                                                  data-type="text"
+                                                  data-color="rgba(255, 255, 255, 1)"
+                                                  data-rsp_ch="on"
+                                                  data-xy="x:l,c,c,c;yo:160px,300px,400px,300px;"
+                                                  data-text="s:16,15,15,14;l:22;ls:6px,5px,4px,4px;fw:300;"
+                                                  data-frame_0="y:-50;"
+                                                  data-frame_1="e:expo.inOut;st:400;sp:800;"
+                                                  data-frame_999="y:-50;o:0;st:w;sp:450;"
+                                                  style="z-index:8;font-family:Montserrat;text-transform:uppercase;">
+                                            @x.SloganKucuk2
+                                        </rs-layer>
+                                        <!--
+
+                                        -->
+                                        <h2 id="slider-3-slide-9-layer-2"
+                                            class="rs-layer big-text"
+                                            data-type="text"
+                                            data-color="rgba(255, 255, 255, 1)"
+                                            data-rsp_ch="on"
+                                            data-xy="x:l,c,c,c;y:m;"
+                                            data-text="s:52,50,45,40;l:23,23,23,25;ls:5px,5px,5px,4px;fw:300;"
+                                            data-frame_0="sX:2;sY:2;"
+                                            data-frame_1="e:expo.inOut;st:400;sp:800;sR:400;"
+                                            data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;e:expo.inOut;st:w;sp:400;sR:4800;"
+                                            style="z-index:9;font-family:Montserrat;text-transform:uppercase;">
+                                            @x.SloganBuyuk2
+                                        </h2>
+                                        <!--
+
+                                        -->
+                                        <a id="slider-3-slide-9-layer-11"
+                                           class="rs-layer rev-btn"
+                                           href="/Home/TalepOlustur" target="_self" rel="nofollow"
+                                           data-type="button"
+                                           data-rsp_ch="on"
+                                           data-xy="x:l,c,c,c;yo:335px,450px,540px,410px;"
+                                           data-text="w:normal;s:13,11,12,11;l:24,21,24,22;ls:3px,2px,1px,1px;fw:700,700,700,600;"
+                                           data-dim="minh:0px,none,none,none;"
+                                           data-padding="t:7,6,5,3;r:30,26,20,12;b:7,6,5,3;l:30,26,20,12;"
+                                           data-border="bos:solid;boc:#ffffff;bow:2px,2px,2px,2px;"
+                                           data-frame_0="y:50,43,32,19;"
+                                           data-frame_1="e:expo.inOut;st:800;sp:400;"
+                                           data-frame_999="y:50,43,32,19;o:0;st:w;sp:450;"
+                                           data-frame_hover="c:#222;bgc:#fff;boc:#fff;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;sp:300ms;e:default;"
+                                           style="z-index:10;background-color:rgba(0,0,0,0);font-family:Montserrat;text-transform:uppercase;">
+                                            Talep Oluştur
+                                        </a>
+                                        <!--
+                                        -->
+                                    </rs-slide>
+                                </rs-slides>
+                                <rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
+                            </rs-module>
+                            <script type="text/javascript">
+                                setREVStartSize({ c: 'rev_slider_3_1', rl: [1240, 1024, 778, 480], el: [500, 768, 960, 720], gw: [1170, 1024, 778, 480], gh: [500, 768, 960, 720], type: 'standard', justify: '', layout: 'fullscreen', offsetContainer: '', offset: '', mh: "0" });
+                                var revapi3,
+                                    tpj;
+                                jQuery(function () {
+                                    tpj = jQuery;
+                                    revapi3 = tpj("#rev_slider_3_1")
+                                    tpj.noConflict();
+                                    if (revapi3 == undefined || revapi3.revolution == undefined) {
+                                        revslider_showDoubleJqueryError("rev_slider_3_1");
+                                    } else {
+                                        revapi3.revolution({
+                                            sliderLayout: "fullscreen",
+                                            duration: 6000,
+                                            visibilityLevels: "1240,1024,778,480",
+                                            gridwidth: "1170,1024,778,480",
+                                            gridheight: "500,768,960,720",
+                                            perspective: 600,
+                                            perspectiveType: "local",
+                                            editorheight: "500,768,960,720",
+                                            responsiveLevels: "1240,1024,778,480",
+                                            disableForceFullWidth: true,
+                                            disableProgressBar: "on",
+                                            stopAtSlide: 2,
+                                            stopAfterLoops: 0,
+                                            stopLoop: true,
+                                            navigation: {
+                                                mouseScrollNavigation: false,
+                                                touch: {
+                                                    touchenabled: true
+                                                },
+                                                arrows: {
+                                                    enable: true,
+                                                    style: "archi__custom-nav",
+                                                    hide_onleave: true,
+                                                    left: {
+
+                                                    },
+                                                    right: {
+
+                                                    }
+                                                }
+                                            },
+                                            fallbacks: {
+                                                allowHTML5AutoPlayOnAndroid: true
+                                            },
+                                        });
+                                    }
+
+                                });
+                            </script>
+                            <script>
+                                var htmlDivCss = unescape(".archi__custom-nav.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3A%20transparent%3B%0A%09width%3A40px%3B%0A%09height%3A40px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A1000%3B%0A%7D%0A%0A.archi__custom-nav.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%27%27%3B%0A%7D%0A.archi__custom-nav.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%27%27%3B%0A%7D%0A%0A");
+                                var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                if (htmlDiv) {
+                                    htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                } else {
+                                    var htmlDiv = document.createElement('div');
+                                    htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                    document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                                }
+                            </script>
+                            <script>
+                                var htmlDivCss = unescape("%0A%0A%0A");
+                                var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                if (htmlDiv) {
+                                    htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                } else {
+                                    var htmlDiv = document.createElement('div');
+                                    htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                    document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                                }
+                            </script>
+                        </rs-module-wrap>
+
+                    }
+                    <!-- END REVOLUTION SLIDER -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="wpb_row vc_row-fluid vc_custom_1495530476030">
+    <div class="container">
+        <div class="row">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper wow fadeInUp">
+                        @foreach (var x in Model)
+                        {
+                            <h1 style="text-align: center;">@x.NeYapiyoruzBaslik</h1>
+                        }
+
+                        <div class="separator "><span><i class="fa fa-circle"></i></span></div>
+                        <div class="spacer-single"></div>
+                    </div>
+                </div>
+            </div>
+            <section class="wpb_row vc_row-fluid vc_custom_1453975735934">
+                <div class="container">
+                    <div class="row">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper ">
+                                    <div id="services-masonry" class="masonry row">
+                                        @Html.Action("IndexHizmet", "Home")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="wpb_column vc_column_container vc_col-sm-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wpb_row vc_row-fluid text-light bg-fixed vc_custom_1495600990831 vc_row-has-fill">
+    <div class="container">
+        <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+                <div class="wpb_wrapper ">
+                    @foreach (var x in Model)
+                    {
+
+                        <h1 style="text-align: center;color: #ffffff;">@x.SurecimizBaslik</h1>
+                    }
+                    <div class="separator "><span><i class="fa fa-circle"></i></span></div>
+                    <div class="spacer-single"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper ">
+                        <div class="de_tab tab_steps tab_4  ">
+                            @Html.Action("IndexSurecimiz", "Home")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="wpb_row vc_row-fluid no-padding">
+    <div class="row">
+        <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+                <div class="wpb_wrapper ">
+
+                    <div class="container">
+                        <!-- portfolio filter begin -->
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper wow fadeInUp">
+                                    <br />
+                                    <h1 style="text-align: center;">Galeri</h1>
+
+
+                                    <div class="separator "><span><i class="fa fa-circle"></i></span></div>
+                                    <div class="spacer-single"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- portfolio filter close -->
+                    </div>
+                    <div id="gallery" class=" gallery full-gallery de-gallery pf_full_width  wow fadeInUp" data-wow-delay=".3s" style="margin:0px 0px">
+
+                        @Html.Action("IndexGaleri", "Home")
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="wpb_row vc_row-fluid call-to-action bg-color text-center vc_custom_1442204079522 no-padding">
+    <div class="row">
+        <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+                <div class="wpb_wrapper ">
+
+                    <a href="~/Home/iletisim" class="btn btn-line-black btn-big  ">Bizimle İletişime Geçin</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<br />
+<section class="wpb_row vc_row-fluid vc_custom_1443169099225 vc_row-has-fill">
+    <div class="container">
+        <div class="row">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper ">
+                        <div class="logo-carousel">
+                            <ul id="logo-carousel-61918e0fe5391" class="slides">
+                                @Html.Action("Referans", "Home")
+                            </ul>
+                        </div>
+                        <script type="text/javascript">
+                            jQuery(document).ready(function () {
+                                'use strict';
+                                jQuery("#logo-carousel-61918e0fe5391").owlCarousel({
+                                    items: 6,
+                                    itemsDesktop: [1199, 4],
+                                    itemsDesktopSmall: [979, 3],
+                                    itemsTablet: [768, 3],
+                                    itemsTabletSmall: [767, 2],
+                                    itemsMobile: [479, 1],
+                                    navigation: false,
+                                    pagination: false,
+                                    autoPlay: true
+                                });
+                                // --------------------------------------------------
+                                //  logo carousel hover
+                                jQuery("#logo-carousel-61918e0fe5391 img").on("mouseenter", function () {
+                                    jQuery(this).fadeTo(150, .5);
+                                }).on("mouseleave", function () {
+                                    jQuery(this).fadeTo(150, 1);
+                                })
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="wpb_row vc_row-fluid text-light bg-fixed vc_custom_1495601107663 vc_row-has-fill">
+    <div class="container">
+        <div class="row">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper ">
+                        @foreach (var x in Model)
+                        {
+                            <h1 style="text-align: center;color: #eceff3;">@x.YorumBalik</h1>
+                        }
+
+                        <div class="separator ">
+                            <span><i class="fa fa-circle"></i></span>
+                        </div>
+                        <div class="spacer-single"></div>
+
+                        <div id="testimonial-carousel-61918d71b099e" class="de_carousel  wow fadeInUp" data-wow-delay=".3s">
+
+                            @Html.Action("IndexMusteriYorum", "Home")
+
+                        </div>
+                        <script type="text/javascript">
+                            jQuery(document).ready(function () {
+                                'use strict';
+                                jQuery("#testimonial-carousel-61918d71b099e").owlCarousel({
+                                    items: 2,
+                                    itemsDesktop: [1199, 2],
+                                    itemsDesktopSmall: [980, 2],
+                                    itemsTablet: [768, 1],
+                                    itemsTabletSmall: false,
+                                    itemsMobile: [479, 1],
+                                    navigation: false,
+                                    autoHeight: true,
+                                    autoPlay: false,
+                                    slideSpeed: 200,
+                                    paginationSpeed: 800,
+                                    rewindSpeed: 1000,
+                                    navigationText: ['', ''],
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            }
+@Html.Action("Video", "Home")

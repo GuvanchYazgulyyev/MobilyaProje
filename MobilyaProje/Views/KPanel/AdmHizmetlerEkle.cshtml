@@ -1,0 +1,43 @@
+﻿@model MobilyaProje.Models.Hizmetler
+@{
+    ViewBag.Title = "AdmHizmetlerEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Hizmet Ekle</h2>
+<div class="col-md-12">
+    @using (Html.BeginForm("AdmHizmetlerEkle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <form class="form-group" method="post">
+
+        
+            Slogan
+            @Html.TextBoxFor(x => x.Slogan, new { @class = "form-control" })
+    
+            Başlık
+            @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+
+   
+            Resim 1
+            <input type="file" name="Resim" />
+         
+            Resim 2
+            <input type="file" name="Resim1" />
+    
+            Resim 3
+            <input type="file" name="Resim2" />
+           
+            İçerik
+            <textarea name="icerik" cols="40" rows="5" required="" class="form-control"></textarea>
+            
+
+
+            @Html.HiddenFor(x => x.id)
+            <br />
+            <button class="button border with-icon">Yeni Hizmet Ekle</button>
+
+        </form>
+    }
+</div>
+

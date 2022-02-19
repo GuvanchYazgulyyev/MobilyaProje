@@ -1,0 +1,71 @@
+﻿@model MobilyaProje.Models.Galeriicerik
+@{
+    ViewBag.Title = "AdmHGaleriicerikGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Gayrimenkul Hizmet Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("AdmHGaleriicerikGuncelle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="div-boyut">
+        <div>
+            Başlık
+            @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+
+        </div>
+        <div>
+            Alt Başlık
+            @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+
+        </div>
+        <div>
+            Tarih
+            @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+        </div>
+        <div>
+            Konum
+            @Html.TextBoxFor(x => x.Konum, new { @class = "form-control" })
+        </div>
+        <div>
+            Deger
+            @Html.TextBoxFor(x => x.Deger, new { @class = "form-control" })
+        </div>
+        <div>
+            Müşteri
+            @Html.TextBoxFor(x => x.Musteri, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b>İçerik</b></label>
+            @Html.TextAreaFor(x => x.icerik, 4, 0, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b>İçerik2</b></label>
+            @Html.TextAreaFor(x => x.icerik1, 3, 0, new { @class = "form-control" })
+        </div>
+        <div>
+            Kategori
+            @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b>Resim</b></label>
+
+            <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+        </div>
+       
+        <div>
+            @Html.HiddenFor(x => x.id)
+        </div>
+       
+        <div>
+            <button class="button border with-icon">Değişiklikleri Kaydet</button>
+            <br />
+            <br />
+        </div>
+    </div>
+
+
+}
+
+
+

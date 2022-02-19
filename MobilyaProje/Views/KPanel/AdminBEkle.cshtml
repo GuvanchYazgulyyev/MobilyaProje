@@ -1,0 +1,56 @@
+﻿@model MobilyaProje.Models.Blok
+@{
+    ViewBag.Title = "AdminBEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2>Blog Ekle</h2>
+<div class="col-md-12">
+    @using (Html.BeginForm("AdminBEkle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    <form class="form-group" method="post">
+        <br />
+        Blog Başlıgı
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+
+        <br />
+        İçerik
+        <textarea name="icerik" cols="40" rows="5" class="form-control"></textarea>
+
+        @*@Html.TextBoxFor(x => x.icerik, new { @class = "form-control" })*@
+        <br />
+        İçerik 2
+        @*@Html.TextBoxFor(x => x.Alinti, new { @class = "form-control" })*@
+        <textarea name="icerik1" cols="40" rows="3" class="form-control"></textarea>
+
+        <br />
+        İçerik 3
+        <textarea name="icerik2" cols="40" rows="3" class="form-control"></textarea>
+
+        <br />
+        Görsel
+
+        <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+        <br />
+
+        Gün
+        @Html.TextBoxFor(x => x.Gun, new { @class = "form-control" })
+        <br />
+
+        Ay
+        @Html.TextBoxFor(x => x.Ay, new { @class = "form-control" })
+        <br />
+
+
+        @*Durum
+        @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })*@
+        @Html.HiddenFor(x => x.id)
+        <br />
+        <button class="button border with-icon">Yeni Blog Ekle</button>
+
+    </form>
+    }
+</div>
+

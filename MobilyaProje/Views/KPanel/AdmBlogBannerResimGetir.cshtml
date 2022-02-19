@@ -1,0 +1,37 @@
+﻿@model MobilyaProje.Models.BlokSayfa
+@{
+    ViewBag.Title = "AdmBlogBannerResimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Blog Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("AdmBlogBannerResimGuncelle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="div-boyut">
+        <label><b>Slogan</b></label>
+        @Html.TextBoxFor(x => x.Slogan, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label><b>Resim</b></label>
+        <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+
+        <input type="file" name="Banner" />
+    </div>
+
+
+    <div>
+        @Html.HiddenFor(x => x.id)
+    </div>
+    <div>
+        <button class="button border with-icon">Değişiklikleri Kaydet</button>
+        <br />
+        <br />
+    </div>
+
+
+}
+
+
+

@@ -1,0 +1,79 @@
+﻿@model MobilyaProje.Models.AnaSayfa
+@{
+    ViewBag.Title = "AdmAnaSayfaBilgiGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h3>Ana Sayfa Bilgilerini Güncelle</h3>
+
+@using (Html.BeginForm("AdmAnaSayfaBilgiGuncel", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="div-boyut">
+        <div>
+            <label><b>Banner Resim(1)</b></label>
+            <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+        </div>
+        <div>
+            <label><b>Banner Resim(2)</b></label>
+            <input type="file" id="File1" name="File1" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+        </div>
+        <div>
+            <label><b>Banner Resim(3)</b></label>
+            <input type="file" id="File2" name="File2" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+        </div>
+        <div>
+            <label><b> Büyük Slogan 1</b></label>
+            @Html.TextBoxFor(x => x.SloganBuyuk, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b> Büyük Slogan 2</b></label>
+            @Html.TextBoxFor(x => x.SloganBuyuk1, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b> Büyük Slogan 3</b></label>
+            @Html.TextBoxFor(x => x.SloganBuyuk2, new { @class = "form-control" })
+        </div> 
+        <div>
+            <label><b> Küçük Slogan 1</b></label>
+            @Html.TextBoxFor(x => x.SloganKucuk, new { @class = "form-control" })
+        </div>
+        <div>
+            <label><b> Küçük Slogan 2</b></label>
+            @Html.TextBoxFor(x => x.SloganKucuk1, new { @class = "form-control" })
+        </div>
+         <div>
+            <label><b> Küçük Slogan 3</b></label>
+            @Html.TextBoxFor(x => x.SloganKucuk2, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>Ne Yapıyoruz Başlık</b></label>
+            @Html.TextAreaFor(x => x.NeYapiyoruzBaslik, 2, 0, new { @class = "form-control" })
+        </div>
+      
+        <div>
+            <label><b>Sürecimiz Başlık</b></label>
+            @Html.TextAreaFor(x => x.SurecimizBaslik, 2, 0, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label><b>Yorum Başlık</b></label>
+            @Html.TextAreaFor(x => x.YorumBalik, 2, 0, new { @class = "form-control" })
+        </div>
+       
+        <div>
+            @Html.HiddenFor(x => x.id)
+        </div>
+        <div>
+            <button class="button border with-icon">Değişiklikleri Kaydet</button>
+            <br />
+            <br />
+        </div>
+    </div>
+
+
+}
+
+

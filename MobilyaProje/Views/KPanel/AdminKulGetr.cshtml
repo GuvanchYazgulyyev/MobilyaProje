@@ -1,0 +1,37 @@
+﻿@model MobilyaProje.Models.Admin
+@{
+    ViewBag.Title = "AdminKulGetr";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Kullanıcı Sayfasını Güncelle</h3>
+
+@using (Html.BeginForm("AdmKulGuncelle", "KPanel", FormMethod.Post))
+{
+    <div id="div-boyut">
+        <label><b>Ad Soyad</b></label>
+        @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+    </div>
+    <div>
+        <label><b>E Psota Adresi</b></label>
+        @Html.TextBoxFor(x => x.Kullanici, new { @class = "form-control" })
+    </div>
+   
+    <div>
+        <label><b>Şifre</b></label>
+        @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+    </div>
+
+   
+    <div>
+        @Html.HiddenFor(x => x.id)
+    </div>
+    <div>
+        <button class="button border with-icon">Değişiklikleri Kaydet</button>
+        <br />
+        <br />
+    </div>
+
+
+}
+

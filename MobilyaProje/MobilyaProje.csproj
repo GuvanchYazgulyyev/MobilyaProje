@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{714592E5-4FE5-4695-8B28-0500C6DD9BAB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobilyaProje</RootNamespace>
+    <AssemblyName>MobilyaProje</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44387</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AddVideoController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KayalarLoginController.cs" />
+    <Compile Include="Controllers\KPanelController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\AnaSayfa.cs" />
+    <Compile Include="Models\Blok.cs" />
+    <Compile Include="Models\BlokSayfa.cs" />
+    <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\FormGonder.cs" />
+    <Compile Include="Models\Galeri.cs" />
+    <Compile Include="Models\Galeriicerik.cs" />
+    <Compile Include="Models\Hakkimizda.cs" />
+    <Compile Include="Models\Hizmetler.cs" />
+    <Compile Include="Models\iletisim.cs" />
+    <Compile Include="Models\MailGonder.cs" />
+    <Compile Include="Models\Mesaj.cs" />
+    <Compile Include="Models\MusteriYorum.cs" />
+    <Compile Include="Models\NeYapiyoruz.cs" />
+    <Compile Include="Models\Referans.cs" />
+    <Compile Include="Models\Surecimiz.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\VideoFiles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPanel\css\AnaKod4.css" />
+    <Content Include="AdminPanel\css\assets\coloredbg.html" />
+    <Content Include="AdminPanel\css\assets\gridtile.html" />
+    <Content Include="AdminPanel\css\assets\gridtile_3x3.html" />
+    <Content Include="AdminPanel\css\assets\gridtile_3x3_white.html" />
+    <Content Include="AdminPanel\css\assets\gridtile_white.html" />
+    <Content Include="AdminPanel\css\bootstrap-grid.css" />
+    <Content Include="AdminPanel\css\icons.css" />
+    <Content Include="AdminPanel\css\ihtiyaciniblrt.css" />
+    <Content Include="AdminPanel\css\images\geocoder.html" />
+    <Content Include="AdminPanel\css\images\layers-2x.html" />
+    <Content Include="AdminPanel\css\images\layers.html" />
+    <Content Include="AdminPanel\css\images\marker-icon.html" />
+    <Content Include="AdminPanel\css\images\throbber.html" />
+    <Content Include="AdminPanel\css\img\loading.html" />
+    <Content Include="AdminPanel\css\invoice.css" />
+    <Content Include="AdminPanel\css\main-color.css" />
+    <Content Include="AdminPanel\css\plugins\closedhand.html" />
+    <Content Include="AdminPanel\css\plugins\openhand.html" />
+    <Content Include="AdminPanel\css\plugins\revolutionslider.css" />
+    <Content Include="AdminPanel\css\sss.css" />
+    <Content Include="AdminPanel\css\style.css" />
+    <Content Include="AdminPanel\css\style2.css" />
+    <Content Include="AdminPanel\css\tumhizmet.css" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont5b62.html" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont5b62.svg" />
+    <Content Include="AdminPanel\fonts\fontello.svg" />
+    <Content Include="AdminPanel\fonts\iconsmindca27.svg" />
+    <Content Include="AdminPanel\fonts\simple-line-iconsc05f.svg" />
+    <Content Include="AdminPanel\images\Guwanç.jpg" />
+    <Content Include="AdminPanel\lgokayalarrenkli2.png" />
+    <Content Include="AdminPanel\logobeyaz1.png" />
+    <Content Include="AdminPanel\scripts\chosen.min.js" />
+    <Content Include="AdminPanel\scripts\counterup.min.js" />
+    <Content Include="AdminPanel\scripts\custom.js" />
+    <Content Include="AdminPanel\scripts\daterangepicker.js" />
+    <Content Include="AdminPanel\scripts\dropzone.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.actions.min.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.migration.min.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="AdminPanel\scripts\extensions\revolution.extension.video.min.js" />
+    <Content Include="AdminPanel\scripts\infobox.min.js" />
+    <Content Include="AdminPanel\scripts\isotope.min.js" />
+    <Content Include="AdminPanel\scripts\jquery-3.4.1.min.js" />
+    <Content Include="AdminPanel\scripts\jquery-migrate-3.1.0.min.js" />
+    <Content Include="AdminPanel\scripts\jquery-ui.min.js" />
+    <Content Include="AdminPanel\scripts\jquery.countdown.min.js" />
+    <Content Include="AdminPanel\scripts\leaflet-autocomplete.js" />
+    <Content Include="AdminPanel\scripts\leaflet-control-geocoder.js" />
+    <Content Include="AdminPanel\scripts\leaflet-gesture-handling.min.js" />
+    <Content Include="AdminPanel\scripts\leaflet-listeo.js" />
+    <Content Include="AdminPanel\scripts\leaflet-markercluster.min.js" />
+    <Content Include="AdminPanel\scripts\leaflet.min.js" />
+    <Content Include="AdminPanel\scripts\magnific-popup.min.js" />
+    <Content Include="AdminPanel\scripts\maps.js" />
+    <Content Include="AdminPanel\scripts\markerclusterer.js" />
+    <Content Include="AdminPanel\scripts\mmenu.min.js" />
+    <Content Include="AdminPanel\scripts\moment.min.js" />
+    <Content Include="AdminPanel\scripts\quantityButtons.js" />
+    <Content Include="AdminPanel\scripts\rangeslider.min.js" />
+    <Content Include="AdminPanel\scripts\slick.min.js" />
+    <Content Include="AdminPanel\scripts\switcher.js" />
+    <Content Include="AdminPanel\scripts\themepunch.revolution.min.js" />
+    <Content Include="AdminPanel\scripts\themepunch.tools.min.js" />
+    <Content Include="AdminPanel\scripts\tooltips.min.js" />
+    <Content Include="AdminPanel\scripts\typed.js" />
+    <Content Include="AdminPanel\scripts\waypoints.min.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Login_v3\css\main.css" />
+    <Content Include="Login_v3\css\util.css" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Login_v3\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Login_v3\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Login_v3\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Login_v3\images\bg-01.jpg" />
+    <Content Include="Login_v3\images\icons\favicon.ico" />
+    <Content Include="Login_v3\js\main.js" />
+    <Content Include="Login_v3\vendor\animate\animate.css" />
+    <Content Include="Login_v3\vendor\animsition\css\animsition.css" />
+    <Content Include="Login_v3\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Login_v3\vendor\animsition\js\animsition.js" />
+    <Content Include="Login_v3\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Login_v3\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Login_v3\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Login_v3\vendor\bootstrap\js\popper.js" />
+    <Content Include="Login_v3\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Login_v3\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Login_v3\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Login_v3\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Login_v3\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Login_v3\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Login_v3\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Login_v3\vendor\daterangepicker\moment.js" />
+    <Content Include="Login_v3\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Login_v3\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Login_v3\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Login_v3\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Login_v3\vendor\select2\select2.css" />
+    <Content Include="Login_v3\vendor\select2\select2.js" />
+    <Content Include="Login_v3\vendor\select2\select2.min.css" />
+    <Content Include="Login_v3\vendor\select2\select2.min.js" />
+    <Content Include="Page404\css\style.css" />
+    <Content Include="Resimler\kalarlogoyeni.png" />
+    <Content Include="Resimler\logo 90x90.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont5b62.eot" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont5b62.ttf" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont5b62.woff" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="AdminPanel\fonts\fontello.eot" />
+    <Content Include="AdminPanel\fonts\fontello.ttf" />
+    <Content Include="AdminPanel\fonts\fontello.woff" />
+    <Content Include="AdminPanel\fonts\iconsmindca27.eot" />
+    <Content Include="AdminPanel\fonts\iconsmindca27.ttf" />
+    <Content Include="AdminPanel\fonts\iconsmindca27.woff" />
+    <Content Include="AdminPanel\fonts\iconsmindd41d.eot" />
+    <Content Include="AdminPanel\fonts\simple-line-iconsc05f.eot" />
+    <Content Include="AdminPanel\fonts\simple-line-iconsc05f.ttf" />
+    <Content Include="AdminPanel\fonts\simple-line-iconsc05f.woff" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Login_v3\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Login_v3\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Login_v3\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Login_v3\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Login_v3\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Login_v3\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Login_v3\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\.images\page-loader.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\AjaxLoader.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\animate080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\bootstrap080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\font\ytp-regular.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\jpreloader080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\jquery.mb.YTPlayer.min080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\light080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\plugin080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\twentytwenty080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\css\woocommerce080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\demo\arrow-down.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\demo\demo080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\demo\demo080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\elegant-font\fonts\ElegantIcons.svg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\elegant-font\style080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\et-line-font\fonts\et-line.svg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\et-line-font\style080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\font-awesome\css\font-awesome080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\close-2.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\close.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\dot-70.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\dotted.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\favicon.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\icon-slide-min.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\icon-slide-plus.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\icon-url.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\icon-zoom.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\large_left.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\large_right.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\list-arrow.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\logo-3.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\logo.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\page-loader.html" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\services\bg-service-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\services\bg-service-2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\services\bg-service-3.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\services\bg-service-4.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\subheader-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\ui\arrow-down.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\images\ui\arrow-up.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\bootstrap.min080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\classie080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\designesia080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\jpreLoader080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\jquery.malihu.PageScroll2id080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\jquery.stellar.min080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\maplace080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\total1080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\js\wow.min080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\styleba8c.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\10.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\11.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\12.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\3.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\4.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\5.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\6-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\7.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\8.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2013\06\9.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\1.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\2.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\3.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\4.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\5.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\6.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\7.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\8.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\bg-41c4b.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\bg-side-11.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p1_a.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p1_a1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p1_b.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p1_b1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p1_c.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p2_a.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p2_a1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p2_b.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p2_b1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p3_a.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p3_a1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p3_b.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p3_b1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p4_a.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\p4_b.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-10.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-11.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-12.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-3.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-4.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-5-540x300.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-5.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-6-540x300.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-6.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-7.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-8.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pf-9.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic-blog-1-540x300.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic-blog-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic-blog-2-540x300.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic-blog-2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic-blog-3-540x300.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic-blog-3.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic-blog-4-540x300.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic-blog-4.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic_1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic_11.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic_2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic_21.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\pic_31.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\subheader-1-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\subheader-3-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\subheader-6-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\team_pic_11.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\team_pic_21.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\team_pic_31.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\07\team_pic_41.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\pic_1-700x337.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\pic_1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\pic_2-700x337.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\pic_2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\pic_3-700x337.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\pic_3.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\subheader-2-1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\subheader-2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\wide1.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\wide2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\08\wide3.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\bg-2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\bg-2dae8.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\bg-37bb5.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\bg-72c72.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\deco_1.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\deco_2.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\hand-with-phone.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\logo-border.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2015\10\video-poster1daa.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\05\bg-12821e.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\05\bg-side-4.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\06\bg-11c424.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\06\bg-side-5.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\06\bg-side-6.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\10\bg-15c68c.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\10\bg-19.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\10\deco_3.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\10\subheader-5.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\11\bg-206444.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2016\11\misc_1.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2017\03\bg-239303.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2017\03\profile-pic-2.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2017\03\profile-pic-3.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2017\03\profile-pic.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2017\03\ttd.png" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\2017\05\bg-6.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-1-n8xw0ychqd0i98ypgxig67nmi33f0fe701l1rcfjn8.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-2-n8xw0ychqd0i98ypgxig67nmi33f0fe701l1rcfjn8.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-3-n8xw0ychqd0i98ypgxig67nmi33f0fe701l1rcfjn8.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-4-n8xw0zabx71skuxcbfx2qpf33gys84hxc68j8me5h0.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-5-n8xw0zabx71skuxcbfx2qpf33gys84hxc68j8me5h0.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-6-n8xw10864132wgvz5ybpb76jouu5ftlnoaw0pwcras.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-7-n8xw10864132wgvz5ybpb76jouu5ftlnoaw0pwcras.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-8-n8xw1160av4d82um0gqbvoy0a8pinipe0fji76bd4k.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\bfi_thumb\pf-9-n8xw123uhp5njot8uz4yg6pgvmkvv7t4ck6zog9yyc.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\revslider\new-home-slider\wide4.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\revslider\new-home-slider\wide5.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\uploads\sites\2\revslider\new-home-slider\wide6.jpg" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\css\dist\block-library\style.min080f.css" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\comment-reply.min080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\dist\hooks.mine16b.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\dist\i18n.min71a7.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\dist\vendor\regenerator-runtime.minb36a.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\dist\vendor\wp-polyfill.min2c7c.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\jquery\jquery-migrate.mind617.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\jquery\jquery.minaf6c.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\wp-embed.min080f.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\js\zxcvbn-async.min5152.js" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-includes\wlwmanifest.xml" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\index.html" />
+    <Content Include="virin\demo.archiwp.com\wp-content\themes\archi\demo\colors\yellow.css" />
+    <Content Include="virin\s.pinimg.com\webapp\11234-58c1785df89a9c86.js" />
+    <Content Include="virin\s.pinimg.com\webapp\12468-84b828f1f9629267.js" />
+    <Content Include="virin\s.pinimg.com\webapp\12506-fbbba5945906bcc3.js" />
+    <Content Include="virin\s.pinimg.com\webapp\12587-ac1de94caff9d740.js" />
+    <Content Include="virin\s.pinimg.com\webapp\13529-92f77dc1397f99b5.js" />
+    <Content Include="virin\s.pinimg.com\webapp\13764-4d6f12723117a688.js" />
+    <Content Include="virin\s.pinimg.com\webapp\14242-29f92f007b543088.js" />
+    <Content Include="virin\s.pinimg.com\webapp\1809-2ecfd6867492c552.js" />
+    <Content Include="virin\s.pinimg.com\webapp\18265-bb144f5e1213e46e.js" />
+    <Content Include="virin\s.pinimg.com\webapp\18401-0394f4c9487ad498.js" />
+    <Content Include="virin\s.pinimg.com\webapp\20798-7f110049d0529038.js" />
+    <Content Include="virin\s.pinimg.com\webapp\23572-7fa2423df6b96d23.css" />
+    <Content Include="virin\s.pinimg.com\webapp\28804-d9f4636a1df50687.js" />
+    <Content Include="virin\s.pinimg.com\webapp\30353-1a138386ff2b47c6.js" />
+    <Content Include="virin\s.pinimg.com\webapp\30524-0d8e5ade03530913.js" />
+    <Content Include="virin\s.pinimg.com\webapp\3288-17d96f612d538030.js" />
+    <Content Include="virin\s.pinimg.com\webapp\37617-a316019649b4419f.js" />
+    <Content Include="virin\s.pinimg.com\webapp\38296-70ec4f650ac8e35d.js" />
+    <Content Include="virin\s.pinimg.com\webapp\39720-d672334020b66861.js" />
+    <Content Include="virin\s.pinimg.com\webapp\40623-0c04484fcffb31dc.js" />
+    <Content Include="virin\s.pinimg.com\webapp\40667-24b427eb87901de5.js" />
+    <Content Include="virin\s.pinimg.com\webapp\40925-ad8294ac06557c7e.js" />
+    <Content Include="virin\s.pinimg.com\webapp\51252-1ba7a20ff0b927cb.js" />
+    <Content Include="virin\s.pinimg.com\webapp\53148-ce8c9490b870eec1.js" />
+    <Content Include="virin\s.pinimg.com\webapp\55998-efb09a3dc7fa2059.js" />
+    <Content Include="virin\s.pinimg.com\webapp\59686-11048738e44d417a.js" />
+    <Content Include="virin\s.pinimg.com\webapp\61365-49327b0a409213b9.js" />
+    <Content Include="virin\s.pinimg.com\webapp\62222-78eb038cd3db5ea1.js" />
+    <Content Include="virin\s.pinimg.com\webapp\64485-25a6f0be1d55d93b.js" />
+    <Content Include="virin\s.pinimg.com\webapp\68506-09ac1abbe716dee3.js" />
+    <Content Include="virin\s.pinimg.com\webapp\68910-7fa2423df6b96d23.css" />
+    <Content Include="virin\s.pinimg.com\webapp\69209-2a0eacaf13045aac.js" />
+    <Content Include="virin\s.pinimg.com\webapp\70079-257309112370be8c.js" />
+    <Content Include="virin\s.pinimg.com\webapp\70708-8e0bdf23d6507464.js" />
+    <Content Include="virin\s.pinimg.com\webapp\73415-94552151331d9513.js" />
+    <Content Include="virin\s.pinimg.com\webapp\74923-f440590653709dd2.js" />
+    <Content Include="virin\s.pinimg.com\webapp\8330-3fb9f410fc4d5ffd.js" />
+    <Content Include="virin\s.pinimg.com\webapp\85833-7d21481ebff6ee40.js" />
+    <Content Include="virin\s.pinimg.com\webapp\87810-89828162a2fe83f4.js" />
+    <Content Include="virin\s.pinimg.com\webapp\884-6f55dad86a63cce5.js" />
+    <Content Include="virin\s.pinimg.com\webapp\90043-fef8d0e8930c0520.js" />
+    <Content Include="virin\s.pinimg.com\webapp\92043-936689888e72163e.js" />
+    <Content Include="virin\s.pinimg.com\webapp\94827-030111232495c80e.js" />
+    <Content Include="virin\s.pinimg.com\webapp\97362-0c6c9dfc68a7676a.js" />
+    <Content Include="virin\s.pinimg.com\webapp\98131-2bb70f19c1bb2fc5.js" />
+    <Content Include="virin\s.pinimg.com\webapp\98431-35e3638c36226603.js" />
+    <Content Include="virin\s.pinimg.com\webapp\bce958f90574f516.png" />
+    <Content Include="virin\s.pinimg.com\webapp\favicon-54a5b2af.png" />
+    <Content Include="virin\s.pinimg.com\webapp\locale-en_US-lite-560f0a2bcf0bd5d5.js" />
+    <Content Include="virin\s.pinimg.com\webapp\logo_trans_144x144-5e37c0c6.png" />
+    <Content Include="virin\s.pinimg.com\webapp\polyfills-241f2fab843a6e1a.js" />
+    <Content Include="virin\s.pinimg.com\webapp\runtime-8f7102f7992d64e4.js" />
+    <Content Include="virin\s.pinimg.com\webapp\vendor-react-2873f1379c854f02.js" />
+    <Content Include="virin\s.pinimg.com\webapp\www\discover\style_content\[id]-unauthdesktop-7fa2423df6b96d23.css" />
+    <Content Include="virin\s.pinimg.com\webapp\www\pin\create\[method]-unauthdesktop-5ac37cc590b1ae45.css" />
+    <Content Include="virin\s.pinimg.com\webapp\www\pin\create\[method]-unauthdesktop-944c66442cf2b91a.js" />
+    <Content Include="virin\s.pinimg.com\webapp\www\today\popular\[interest]\[interestId]-unauthdesktop-cbd4943a78c46655.css" />
+    <Content Include="virin\s.pinimg.com\webapp\www\_client-unauthdesktop-a9c2b6b996546c28.js" />
+    <Content Include="virin\s.pinimg.com\webapp\www\_client-unauthdesktop-eb36d9d4ab00d1df.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\elegant-font\fonts\ElegantIcons.eot" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\elegant-font\fonts\ElegantIcons.ttf" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\elegant-font\fonts\ElegantIcons.woff" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\elegant-font\fonts\ElegantIconsd41d.eot" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\et-line-font\fonts\et-line.eot" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\et-line-font\fonts\et-line.ttf" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\et-line-font\fonts\et-line.woff" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\et-line-font\fonts\et-lined41d.eot" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\font-awesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-content\themes\archi\fonts\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed01e8.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed01eb" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed025d.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed04b0" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed0787.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed0926" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed0b8f" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed0dc5" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed0f9d.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed0fab" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed11d4" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed1506" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed1777" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed17a9" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed17ea.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed1a0e" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed1bcb.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed1cbf.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed2012" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed21a9.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed2329.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed23c2" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed25f8.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed268b" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed296b.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed2a7b" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed2c17.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed2ecd.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed2eed.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed310f.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed33b9" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed3855" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed3c42" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed3f33" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed44b3.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed4e04.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed4e93" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed4f8a" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed512f.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed52e2.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed538d" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed54f7" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed5520" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed5afa" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed5d22.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed6010.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed62e6.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed687e.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed68f7" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed6b35" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed6e86.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed6ebd.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed6f25" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed6fdc.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7006.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed72db" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7366.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7424" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7654.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed76e8" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7af4" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7bfd.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7e83.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7ee6" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7efa" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7f65" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed7f7f" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed8094" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed85a0.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed8661.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed8903.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed8a98" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed8eae" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed9213" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed92ab.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed9422.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed95f4" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed9623" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed97d3.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed9a7e" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed9b0d.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed9e34" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embed9fa4" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeda07d" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeda137" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeda3b1.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeda964.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedacdd.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedad5a.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedaf3c.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedb00c.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedb144" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedb33d" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedb5d5" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedb985" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedbe89" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedc020" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedc448" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedc4cb" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedc560" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedc73b.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedca88.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd003.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd0f7.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd1c6" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd268" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd49f.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd4c0.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd5d2" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd6f2.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedd7da.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeddc08.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeddc8b.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeddccd.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeddd98.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embeddf4e" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embede145.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embede523.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embede8e2" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedea56" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedf0d8" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedf4ef" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedf7e1.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedfc99.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedfe85.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\oembed\1.0\embedffbc.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\categories\15.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\categories\16.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\categories\17.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\categories\18.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1014.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1039.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1041.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1061.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\107.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1073.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1084.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1089.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1091.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1093.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1096.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1098.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1100.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1101.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1102.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1162.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\141.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1424.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1432.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\1433.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\229.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\256.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\375.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\425.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\448.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\464.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\467.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\679.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\76.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\784.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\802.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\823.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\842.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\847.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\851.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\853.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\855.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\856.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\872.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\892.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\pages\915.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\posts\24.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\posts\28.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\posts\32.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\posts\35.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\posts\37.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\posts\40.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\733.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\734.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\735.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\736.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\737.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\740.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\744.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\745.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\746.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\747.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\748.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product\83.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product_cat\36.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product_cat\37.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product_cat\38.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product_cat\39.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product_cat\40.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product_cat\41.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\product_cat\54.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\19.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\20.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\21.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\22.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\23.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\24.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\25.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\26.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\27.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\28.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\29.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\30.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\tags\31.json" />
+    <Content Include="virin\demo.archiwp.com\light-version\wp-json\wp\v2\users\1.json" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\IndexHizmet.cshtml" />
+    <Content Include="Views\Home\IndexSurecimiz.cshtml" />
+    <Content Include="Views\Home\IndexGaleri.cshtml" />
+    <Content Include="Views\Home\IndexMusteriYorum.cshtml" />
+    <Content Include="Views\Home\Footer1.cshtml" />
+    <Content Include="Views\Home\Footer1Blok.cshtml" />
+    <Content Include="Views\Home\Footer1iletisim.cshtml" />
+    <Content Include="Views\Home\Footer2Media.cshtml" />
+    <Content Include="Views\Home\Hakkimizda.cshtml" />
+    <Content Include="Views\Home\HakkimizdaMusteriYorum.cshtml" />
+    <Content Include="Views\Home\iletisim.cshtml" />
+    <Content Include="Views\Home\Mesaj.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Home\BlogListele.cshtml" />
+    <Content Include="Views\Home\BlogSonPost.cshtml" />
+    <Content Include="Views\Home\BlogDetay.cshtml" />
+    <Content Include="Views\Home\BlogHakkimizda.cshtml" />
+    <Content Include="Views\Home\GaleriDetay.cshtml" />
+    <Content Include="Views\Home\GaleriDetayResim.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\KPanel\Index.cshtml" />
+    <Content Include="Views\KPanel\Adminkullanici.cshtml" />
+    <Content Include="Views\KPanel\AdminKulEkle.cshtml" />
+    <Content Include="Views\KPanel\AdminKulGetr.cshtml" />
+    <Content Include="Views\KPanel\AdmAnaSayfaBilgiGetir.cshtml" />
+    <Content Include="Views\KPanel\AdmAnaSayfaBilgi.cshtml" />
+    <Content Include="Views\KPanel\AdminBlog.cshtml" />
+    <Content Include="Views\KPanel\AdminBEkle.cshtml" />
+    <Content Include="Views\KPanel\AdminBGetir.cshtml" />
+    <Content Include="Views\KPanel\AdmBlogBannerResim.cshtml" />
+    <Content Include="Views\KPanel\AdmBlogBannerResimGetir.cshtml" />
+    <Content Include="Views\KPanel\AdmHGaleriicerik.cshtml" />
+    <Content Include="Views\KPanel\AdmHGaleriicerikEkle.cshtml" />
+    <Content Include="Views\KPanel\AdmHGaleriicerikGetir.cshtml" />
+    <Content Include="Views\KPanel\AdmGaleriResim.cshtml" />
+    <Content Include="Views\KPanel\AdmGaleriResimEkle.cshtml" />
+    <Content Include="Views\KPanel\AdmGaleriResimGetir.cshtml" />
+    <Content Include="Views\KPanel\AdiminHakYazi.cshtml" />
+    <Content Include="Views\KPanel\AdminHakGetir.cshtml" />
+    <Content Include="Views\KPanel\AdmHizmetler.cshtml" />
+    <Content Include="Views\KPanel\AdmHizmetlerEkle.cshtml" />
+    <Content Include="Views\KPanel\AdmHizmetlerGetir.cshtml" />
+    <Content Include="Views\KPanel\AdmiletsmBilgi.cshtml" />
+    <Content Include="Views\KPanel\AdmiltGetr.cshtml" />
+    <Content Include="Views\KPanel\AdmiletsmGMesaj.cshtml" />
+    <Content Include="Views\KPanel\AdmMesjGetr.cshtml" />
+    <Content Include="Views\KPanel\AdmMutMusYorum.cshtml" />
+    <Content Include="Views\KPanel\AdmMutMusEkle.cshtml" />
+    <Content Include="Views\KPanel\AdmMutMusGetr.cshtml" />
+    <Content Include="Views\KPanel\AdmNeYapiyoruz.cshtml" />
+    <Content Include="Views\KPanel\AdmNeYapiyoruzEkle.cshtml" />
+    <Content Include="Views\KPanel\AdmNeYapiyoruzGetr.cshtml" />
+    <Content Include="Views\KPanel\AdmSurecimiz.cshtml" />
+    <Content Include="Views\KPanel\AdmSurecimizGetr.cshtml" />
+    <Content Include="Views\Error\PageError.cshtml" />
+    <Content Include="Views\KayalarLogin\Index.cshtml" />
+    <Content Include="Views\Home\IndexHizmetDetay.cshtml" />
+    <Content Include="Views\Home\Referans.cshtml" />
+    <Content Include="Views\Home\IndexHizmetDetayMenu.cshtml" />
+    <Content Include="Views\Home\IndexHizmetDetayMenuAlt.cshtml" />
+    <Content Include="Views\KPanel\HakkimizdaEkle.cshtml" />
+    <Content Include="Views\KPanel\AdmReferans.cshtml" />
+    <Content Include="Views\KPanel\AdmRefEkle.cshtml" />
+    <Content Include="Views\KPanel\AdmRefGetr.cshtml" />
+    <Content Include="Views\Home\HizmetlerDropDown.cshtml" />
+    <Content Include="Views\Home\Video.cshtml" />
+    <Content Include="Views\AddVideo\UploadFiles.cshtml" />
+    <Content Include="Views\Home\TalepOlustur.cshtml" />
+    <Content Include="Views\KPanel\AdminHizForm.cshtml" />
+    <Content Include="Views\KPanel\AdminHiFormGetir.cshtml" />
+    <Content Include="Views\KPanel\AdmVideo.cshtml" />
+    <Content Include="Views\KPanel\AdmVideoEkle.cshtml" />
+    <Content Include="Views\KPanel\AdmVideoGetr.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Resim\" />
+    <Folder Include="VideoFileUpload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59149</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44387/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

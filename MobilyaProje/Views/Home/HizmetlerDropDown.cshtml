@@ -1,0 +1,19 @@
+﻿@using MobilyaProje.Models
+@model List<NeYapiyoruz>
+
+
+
+
+@foreach (var x in Model)
+{
+
+    <li id="menu-item-1241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1241 ">
+        <a title="Wide Style" href="/Home/IndexHizmetDetay/@x.id">@x.Baslik1</a>
+        @*<ul role="menu" class=" dropdown-menu">
+                <li id="menu-item-1220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1220"><a title="Projects 2 cols" href="projects-2-cols/index.html">Projects 2 cols</a></li>
+                <li id="menu-item-1221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221"><a title="Projects 3 cols" href="projects-3-cols/index.html">Projects 3 cols</a></li>
+                <li id="menu-item-1219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1219"><a title="Projects 4 cols" href="projects-4-cols/index.html">Projects 4 cols</a></li>
+            </ul>*@
+    </li>
+
+}

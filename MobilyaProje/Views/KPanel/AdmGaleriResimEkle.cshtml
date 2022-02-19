@@ -1,0 +1,29 @@
+﻿@model MobilyaProje.Models.Galeri
+@{
+    ViewBag.Title = "AdmGaleriResimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2>Galeri Resim Ekle</h2>
+<div class="col-md-12">
+    @using (Html.BeginForm("AdmGaleriResimEkle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    <form class="form-group" method="post">
+        <br />
+        Resim
+        <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+
+
+        <b> Kategoriler *</b>
+        @Html.DropDownListFor(x => x.Galeriid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+
+
+        @Html.HiddenFor(x => x.id)
+        <br />
+        <button class="button border with-icon"> Yeni Resim Ekle</button>
+
+    </form>
+    }
+</div>

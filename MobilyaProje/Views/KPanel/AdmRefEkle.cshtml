@@ -1,0 +1,32 @@
+﻿@model MobilyaProje.Models.Referans
+@{
+    ViewBag.Title = "AdmRefEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<h3>Referans Ekle</h3>
+
+
+<div class="col-md-12" id="div-boyut">
+    @using (Html.BeginForm("AdmRefEkle", "KPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <form method="post">
+           
+            <div>
+                <label><b>Resim</b></label>
+                <input type="file" id="File" name="File" accept=".jpg,.JPG,.PNG,.png,.jpeg,.JPEG" class="form-control" />
+            </div>
+         
+            @Html.HiddenFor(x => x.id)
+
+            <div>
+                <button class="button border with-icon">Referans Ekle</button>
+            </div>
+            <br />
+        </form>
+    }
+</div>
+
